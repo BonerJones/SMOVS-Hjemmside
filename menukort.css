@@ -1,0 +1,233 @@
+.hero {
+    position: relative;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.wave-top {
+    width: 100%;
+    display: block;
+    margin-top: -70px;
+}
+
+/* -------------------------- */
+/*      MENUKORT INTRO        */
+/* -------------------------- */
+
+.menu-intro {
+    padding: 0 22px 40px;
+    background: var(--green);
+}
+
+.menu-intro h1 {
+    color: var(--yellow-main);
+    font-size: 64px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.menu-intro p {
+    font-size: 16px;
+    opacity: 0.9;
+    line-height: 1.4;
+    color: white;
+    text-align: center;
+}
+
+/* -------------------------- */
+/*          BUTTONS           */
+/* -------------------------- */
+
+.button-group {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content;
+    margin-left: 33%;
+}
+
+.outline-btn {
+    border: 2px solid var(--yellow);
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    background-color: var(--yellow-main);
+}
+
+/* -------------------------- */
+/*        WAVE DIVIDER        */
+/* -------------------------- */
+
+.wave-bottom {
+    width: 100%;
+    display: block;
+    margin-top: -20px;
+}
+
+/* -------------------------- */
+/*       UGEBASERET RET       */
+/* -------------------------- */
+
+.weekly {
+    background: var(--yellow-main);
+    padding: 40px 22px;
+    color: var(--green);
+    margin-top: -70px;
+}
+
+.weekly h2 {
+    margin-bottom: 2px;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.availability {
+    margin-bottom: 16px;
+}
+
+.weekly-img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.weekly h3 {
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+.price {
+    margin-bottom: 10px;
+    margin-top: 0px;
+    color: var(--green-dark);
+
+}
+
+.desc {
+    line-height: 1.4;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.wave-bottom-bottom {
+    width: 100%;
+    display: block;
+    margin-top: -70px;
+}
+
+
+
+/* ========================================================= */
+/* OVERLAY */
+/* ========================================================= */
+#overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease;
+    z-index: 20;
+  }
+  
+  #overlay.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  /* ========================================================= */
+  /* MENU MODAL */
+  /* ========================================================= */
+  #menuModal {
+    position: fixed;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 94%;                     /* Better for 402px screens */
+    max-width: 402px;               /* LOCK the design to mobile width */
+    max-height: 94vh;
+    overflow-y: auto;
+    background: transparent;
+    border-radius: 16px;
+    padding: 16px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease;
+    z-index: 30;
+  }
+  
+  #menuModal.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  /* Remove extra margin when scrolling inside modal */
+  #menuModal::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* ========================================================= */
+  /* MENU PAGE IMAGES */
+  /* ========================================================= */
+  .menu-page {
+    display: none;
+    margin-top: 120px;
+  }
+  
+  .menu-page img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+  }
+  
+  /* ========================================================= */
+  /* NAVIGATION BUTTONS */
+  /* ========================================================= */
+  .menu-nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0;
+    gap: 10px;
+  }
+  
+  .menu-nav-btn {
+    flex: 1;                         /* Buttons stretch equal */
+    background: var(--yellow-main);
+    border: none;
+    padding: 14px 0;
+    border-radius: 30px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  /* ========================================================= */
+  /* CLOSE BUTTON */
+  /* ========================================================= */
+  .close-menu-btn {
+    width: 50%;
+    background: var(--yellow-main);
+    border: none;
+    padding: 14px 0;
+    border-radius: 30px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding-bottom: 20px;
+    justify-content: center;
+    
+  }
+  

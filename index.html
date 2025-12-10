@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMOVS – Landingpage</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="landingpage.css" />
+  <script src="header.js"></script>
+
+  <!-- Primær font til overskrifter -->
+  <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Sekundær font til brødtekst -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page">
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="logo">
+        <a href="/" class="logo-link">
+          <img src="images/logo.svg" alt="SMOVS logo" class="site-logo" />
+        </a>
+      </div>
+
+      <button class="burger" aria-label="Åbn menu">
+        <img src="images/icons/burger.svg" alt="Menu" class="burger-icon" />
+      </button>
+      <!-- Mobile dropdown menu (hidden by default) -->
+      <nav id="mobileMenu" class="mobile-menu" aria-hidden="true" aria-labelledby="mobileMenuLabel">
+        <ul>
+          <li><a href="index.html">Forside</a></li>
+          <li><a href="menukort.html">Menukort</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="lokaler.html">Lokaler</a></li>
+          <li><a href="om.html">Om</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-image">
+            <img src="images/hero.jpg" alt="Malleri fra SMOVS" />
+        <div class="hero-content">
+          <p class="hero-tagline">Mad & drikke fra alle verdens hjørner</p>
+          <a href="#menu" class="btn btn-cta">Se vores menu      →</a>
+        </div></div>
+      </section>
+
+      <!-- VELKOMMEN / VI TILBYDER -->
+      <section class="welcome" id="welcome">
+          <img src="images/wave.svg" alt="Bølge" class="wave1"/>
+
+        <div class="welcome-inner">
+          <h1 class="welcome-title">Velkommen til smovs</h1>
+          <h2 class="welcome-subtitle">Vi tilbyder</h2>
+
+          <div class="offer-list">
+
+            <article class="offer-card">
+              <div class="offer-icon"><img src="images/icons/drink.svg"></div>
+              <div class="offer-text">
+                <h4>Drikkevarer</h4>
+                <h6>Lokalt udvalgte drikke – nøje udvalgt og serveret med personlighed.</h6>
+                <a href="#menu" class="offer-link">Læs mere</a>
+              </div>
+            </article>
+
+            <article class="offer-card">
+              <div class="offer-icon"><img src="images/icons/mad.svg"></div>
+              <div class="offer-text">
+                <h4>Mad & snacks</h4>
+                <h6>Lækre småretter med inspiration fra hele verden – perfekt til at dele.</h6>
+                <a href="#menu" class="offer-link">Læs mere</a>
+              </div>
+            </article>
+
+            <article class="offer-card">
+              <div class="offer-icon"><img src="images/icons/event.svg"></div>
+              <div class="offer-text">
+                <h4>Events</h4>
+                <h6>Farverig indretning og varm gæstfrihed skaber uforglemmelige øjeblikke.</h6>
+                <a href="#events" class="offer-link">Læs mere</a>
+              </div>
+            </article>
+
+            <article class="offer-card">
+              <div class="offer-icon"><img src="images/icons/lokaler.svg"></div>
+              <div class="offer-text">
+                <h4>Lokaler</h4>
+                <h6>Lej vores lokaler og hold festen i jeres eget tempo – vi sørger for stemningen.</h6>
+                <a href="#lokaler" class="offer-link">Læs mere</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+ <img src="images/wave.svg" alt="Bølge" class="wave2" />
+      </section>
+
+      <!-- GALLERI -->
+      <section class="gallery" id="gallery">
+        <h2>Galleri</h2>
+
+        <div class="gallery-list">
+          <figure class="gallery-item">
+            <img src="images/gal1.jpg" alt="Gæster der nyder en drink udenfor" />
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="images/gal2.jpg" alt="Småretter og snacks på bordet" />
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="images/gal3.jpg" alt="Bartender der skænker vin" />
+          </figure>
+        </div>
+      </section>
+<img src="images/wave.svg" alt="Bølge" class="wave3"/>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-logo"><img src="images/logo.svg"></div>
+
+      <div class="footer-block">
+        <div class="footer-item1">
+          <img src="images/icons/tid.svg" alt="Åbningstid ikon">
+          <p>Ons–Tors: 14.30 – 22.00</p>
+        </div>
+        <div class="footer-item2">
+          <p>Fredag: 14.30 – 00.00</p>
+        </div>
+        <div class="footer-item3">
+          <p>Lørdag: 12.00 – 00.00</p>
+        </div>
+      </div>
+    
+      
+      <div class="footer-block">
+        <div class="insta">
+          <img src="images/icons/insta.svg" alt="Instagram ikon">
+          <p>@smovs</p>
+        </div>
+        <div class="tele">
+          <img src="images/icons/tele.svg" alt="Telefon ikon">
+          <p>+45 28 40 84 70</p>
+        </div>
+        <div class="mail">
+          <img src="images/icons/mail.svg" alt="Mail ikon">
+          <p>kontakt@smovs.dk</p>
+        </div>
+        <div class="find">
+          <img src="images/icons/find.svg" alt="Lokation ikon">
+          <p>Mejlgade 42, 8000 Aarhus C</p>
+        </div>
+      </div>
+
+      <p class="footer-note">© 2025 SMOVS · Bar, hygge & events i hjertet af Aarhus</p>
+    </footer>
+  </div>
+</body>
+</html>
+

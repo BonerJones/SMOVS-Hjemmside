@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMOVS – Menukort</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="menukort.css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Header JS -->
+  <script src="header.js" defer></script>
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- ==================================== -->
+    <!-- HEADER -->
+    <!-- ==================================== -->
+    <header class="site-header">
+      <div class="logo">
+        <a href="/" class="logo-link">
+          <img src="images/logo.svg" alt="SMOVS logo" class="site-logo" />
+        </a>
+      </div>
+
+      <button class="burger" aria-label="Åbn menu">
+        <img src="images/icons/burger.svg" alt="Menu" class="burger-icon" />
+      </button>
+      <!-- Mobile dropdown menu (hidden by default) -->
+      <nav id="mobileMenu" class="mobile-menu" aria-hidden="true" aria-labelledby="mobileMenuLabel">
+        <ul>
+          <li><a href="index.html">Forside</a></li>
+          <li><a href="menukort.html">Menukort</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="lokaler.html">Lokaler</a></li>
+          <li><a href="om.html">Om</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <!-- ==================================== -->
+    <!-- MAIN CONTENT -->
+    <!-- ==================================== -->
+    <main>
+
+      <!-- HERO -->
+      <section class="hero">
+        <img src="images/menu.jpg" class="hero-img" alt="Menukort billede">
+        <img src="images/wave.svg" class="wave-top" alt="">
+      </section>
+
+      <!-- MENUKORT INTRO -->
+      <section class="menu-intro">
+        <h1>Menukort</h1>
+
+        <p>
+          Her finder du vores udvalg af mad og drikke – simple, velsmagende
+          favoritter, der passer perfekt til den hyggelige stemning hos SMOVS.
+        </p>
+
+        <div class="button-group">
+          <!-- OPEN DRINK PAGES -->
+          <a href="#" class="outline-btn" onclick="openMenu(0)">Drikkevarer <span>→</span></a>
+
+          <!-- OPEN FOOD PAGE -->
+          <a href="#" class="outline-btn" onclick="openMenu(5)">Mad & Snacks <span>→</span></a>
+        </div>
+      </section>
+
+      <img src="images/wave.svg" class="wave-bottom" alt="">
+
+
+      <!-- UGEBASERET RET -->
+      <section class="weekly">
+        <h2>Ugens Ret</h2>
+        <h5 class="availability">Tilgængelig onsdag – lørdag denne uge</h5>
+
+        <img src="images/ugens.jpg" class="weekly-img" alt="Ugens ret">
+
+        <h3>FLAMMKUCHEN + FADØL</h3>
+        <h3 class="price">65 kr.</h3>
+
+        <p class="desc">
+          Nyd en sprød flamkuchen og en kold fadøl for kun 65 kr. – den perfekte
+          kombination til en hyggelig aften hos SMOVS.
+        </p>
+      </section>
+
+      <img src="images/wave.svg" class="wave-bottom-bottom" alt="">
+    </main>
+
+
+    <!-- ==================================== -->
+    <!-- FOOTER -->
+    <!-- ==================================== -->
+    <footer class="site-footer">
+      <div class="footer-logo"><img src="images/logo.svg"></div>
+
+      <div class="footer-block">
+        <div class="footer-item1">
+          <img src="images/icons/tid.svg" alt="Åbningstid ikon">
+          <p>Ons–Tors: 14.30 – 22.00</p>
+        </div>
+        <div class="footer-item2">
+          <p>Fredag: 14.30 – 00.00</p>
+        </div>
+        <div class="footer-item3">
+          <p>Lørdag: 12.00 – 00.00</p>
+        </div>
+      </div>
+
+      <div class="footer-block">
+        <div class="insta">
+          <img src="images/icons/insta.svg" alt="Instagram ikon">
+          <p>@smovs</p>
+        </div>
+        <div class="tele">
+          <img src="images/icons/tele.svg" alt="Telefon ikon">
+          <p>+45 28 40 84 70</p>
+        </div>
+        <div class="mail">
+          <img src="images/icons/mail.svg" alt="Mail ikon">
+          <p>kontakt@smovs.dk</p>
+        </div>
+        <div class="find">
+          <img src="images/icons/find.svg" alt="Lokation ikon">
+          <p>Mejlgade 42, 8000 Aarhus C</p>
+        </div>
+      </div>
+
+      <p class="footer-note">© 2025 SMOVS · Bar, hygge & events i hjertet af Aarhus</p>
+    </footer>
+  </div>
+
+
+  <!-- ==================================== -->
+  <!-- MENU OVERLAY + MODAL (ADDED HERE) -->
+  <!-- ==================================== -->
+
+  <!-- DARK BACKGROUND -->
+  <div id="overlay"></div>
+
+  <!-- MENU MODAL -->
+  <div id="menuModal">
+    <div class="menu-inner">
+
+      <!-- DRINK PAGE IMAGES -->
+      <div class="menu-page"><img src="images/menu/drink1.jpg"></div>
+      <div class="menu-page"><img src="images/menu/drink2.jpg"></div>
+      <div class="menu-page"><img src="images/menu/drink3.jpg"></div>
+      <div class="menu-page"><img src="images/menu/drink4.jpg"></div>
+      <div class="menu-page"><img src="images/menu/drink5.jpg"></div>
+
+      <!-- FOOD PAGE -->
+      <div class="menu-page"><img src="images/menu/mad.jpg"></div>
+    </div>
+
+    <!-- NAVIGATION BUTTONS -->
+    <div class="menu-nav">
+      <button id="prevBtn" class="menu-nav-btn">← Forrige</button>
+      <button id="nextBtn" class="menu-nav-btn">Næste →</button>
+    </div>
+
+    <!-- CLOSE BUTTON -->
+    <button id="closeMenu" class="close-menu-btn">✕ Luk vindue</button>
+  </div>
+
+
+  <!-- ==================================== -->
+  <!-- MENU SCRIPT -->
+  <!-- ==================================== -->
+  <script>
+    let currentPage = 0;
+    const pages = document.querySelectorAll(".menu-page");
+    const overlay = document.getElementById("overlay");
+    const modal = document.getElementById("menuModal");
+
+    function openMenu(pageIndex) {
+      currentPage = pageIndex;
+      overlay.classList.add("show");
+      modal.classList.add("show");
+      showPage(currentPage);
+    }
+
+    function closeMenu() {
+      overlay.classList.remove("show");
+      modal.classList.remove("show");
+    }
+
+    function showPage(index) {
+      pages.forEach((p, i) => {
+        p.style.display = i === index ? "block" : "none";
+      });
+    }
+
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      currentPage = (currentPage + 1) % pages.length;
+      showPage(currentPage);
+    });
+
+    document.getElementById("prevBtn").addEventListener("click", () => {
+      currentPage = (currentPage - 1 + pages.length) % pages.length;
+      showPage(currentPage);
+    });
+
+    document.getElementById("closeMenu").addEventListener("click", closeMenu);
+    overlay.addEventListener("click", closeMenu);
+  </script>
+
+</body>
+</html>
