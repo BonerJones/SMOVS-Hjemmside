@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SMOVS – Landingpage</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="landingpage.css" />
+  <link rel="stylesheet" href="events.css" />
   <script src="header.js"></script>
+  <script src="events.js"></script>
 
   <!-- Primær font til overskrifter -->
   <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@500;700&display=swap" rel="stylesheet">
@@ -39,6 +40,123 @@
         </ul>
       </nav>
     </header>
+    <main class="events-page">
+
+      <!-- HERO / INTRO -->
+      <section class="events-hero">
+        <h1 class="events-hero-title">Events</h1>
+        <p class="events-hero-subtitle">
+          Find dine næste hyggelige oplevelser hos SMOVS.
+        </p>
+      </section>
+  
+      <!-- Hvis du har en bølge-grafik kan du bruge et rigtigt billede her -->
+      <!-- <img src="images/wave-events.svg" alt="" class="wave-divider" /> -->
+  
+      <!-- KALENDER-SEKTION -->
+      <section class="events-calendar-section">
+        <div class="events-calendar-wrapper">
+          <p class="events-calendar-title">Events i januar</p>
+          <p class="events-calendar-month">Januar 2026</p>
+  
+          <div class="calendar">
+            <!-- Ugedage -->
+            <span class="calendar-day-label">MAN</span>
+            <span class="calendar-day-label">TIR</span>
+            <span class="calendar-day-label">ONS</span>
+            <span class="calendar-day-label">TORS</span>
+            <span class="calendar-day-label">FRE</span>
+            <span class="calendar-day-label">LØR</span>
+            <span class="calendar-day-label">SØN</span>
+  
+            <!-- Første uge: 1 starter på torsdag -->
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="calendar-day">1</span>
+            <span class="calendar-day">2</span>
+            <span class="calendar-day">3</span>
+            <span class="calendar-day">4</span>
+  
+            <!-- Uge 2 -->
+            <span class="calendar-day">5</span>
+            <span class="calendar-day">6</span>
+            <span class="calendar-day">7</span>
+            <span class="calendar-day">8</span>
+            <span class="calendar-day">9</span>
+            <span class="calendar-day" data-day="10">10</span>
+            <span class="calendar-day">11</span>
+  
+            <!-- Uge 3 -->
+            <span class="calendar-day">12</span>
+            <span class="calendar-day">13</span>
+            <span class="calendar-day">14</span>
+            <span class="calendar-day" data-day="15">15</span>
+            <span class="calendar-day">16</span>
+            <span class="calendar-day">17</span>
+            <span class="calendar-day">18</span>
+  
+            <!-- Uge 4 -->
+            <span class="calendar-day">19</span>
+            <span class="calendar-day">20</span>
+            <span class="calendar-day">21</span>
+            <span class="calendar-day">22</span>
+            <span class="calendar-day" data-day="23">23</span>
+            <span class="calendar-day">24</span>
+            <span class="calendar-day">25</span>
+  
+            <!-- Uge 5 -->
+            <span class="calendar-day">26</span>
+            <span class="calendar-day">27</span>
+            <span class="calendar-day">28</span>
+            <span class="calendar-day">29</span>
+            <span class="calendar-day">30</span>
+            <span class="calendar-day">31</span>
+            <span></span>
+          </div>
+        </div>
+      </section>
+  
+      <!-- EVENT-KORT (DYNAMISK) -->
+      <section class="events-list-section">
+        <h2 class="events-list-heading">Kommende events</h2>
+  
+        <article class="event-card" id="event-card">
+          <div class="event-image-wrapper">
+            <img
+              id="event-image"
+              src="images/events/jazz-night.jpg"
+              alt="Jazz Night med lokale kunstnere"
+            />
+          </div>
+  
+          <div class="event-content">
+            <span class="event-label" id="event-label">Musik</span>
+            <h3 class="event-title" id="event-title">
+              Jazz Night med lokale kunstnere
+            </h3>
+            <p class="event-meta" id="event-meta">
+              10. jan 2026 · 19:00
+            </p>
+            <p class="event-description" id="event-description">
+              Nyd en afslappet aften med live jazz, gode vine og hyggelig stemning hos SMOVS.
+            </p>
+            <a href="#" class="event-link" id="event-link">
+              Læs mere <span>→</span>
+            </a>
+          </div>
+        </article>
+  
+        <p class="events-empty" id="events-empty">
+          Der er ingen planlagte events på den valgte dato.
+        </p>
+  
+        <p class="events-note">
+          Nye events kommer løbende – hold øje med kalenderen og vores Instagram.
+        </p>
+      </section>
+  
+    </main>
 
         <!-- FOOTER -->
     <footer class="site-footer">

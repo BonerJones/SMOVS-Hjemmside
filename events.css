@@ -1,0 +1,219 @@
+/* =====================================
+     EVENTS HERO
+   ===================================== */
+  
+  .events-hero {
+    width: 100%;
+    background: var(--green-dark);
+    padding: 28px 22px 36px;
+  }
+  
+  .events-hero-title {
+    font-family: var(--font-display);
+    font-size: 24px;
+    margin: 0 0 6px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  
+  .events-hero-subtitle {
+    font-size: 12px;
+    max-width: 260px;
+    line-height: 1.45;
+    margin: 0;
+  }
+  
+  /* Bølge, hvis du bruger billede */
+  .wave-divider {
+    width: 100%;
+    display: block;
+  }
+  
+  /* =====================================
+     KALENDER
+  ===================================== */
+  
+  .events-calendar-section {
+    width: 100%;
+    background: var(--green-dark);
+    padding: 0 18px 26px;
+  }
+  
+  .events-calendar-wrapper {
+    width: 100%;
+    background: var(--yellow-main);
+    border-radius: 18px;
+    padding: 14px 12px 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
+  
+  .events-calendar-title {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    color: var(--green-dark);
+    margin: 0 0 2px;
+  }
+  
+  .events-calendar-month {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--green-dark);
+    margin: 0 0 10px;
+  }
+  
+  .calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+  }
+  
+  .calendar-day-label {
+    font-size: 9px;
+    text-align: center;
+    color: var(--green-dark);
+    font-weight: 700;
+  }
+  
+  /* Dage generelt */
+  .calendar-day {
+    width: 26px;
+    height: 26px;
+    margin: 2px auto 0;
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--green-dark);
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.15s ease;
+    border: none;
+    outline: none;
+  }
+  
+  /* Kun disse (med data-day) er klikbare */
+  .calendar-day[data-day] {
+    cursor: pointer;
+  }
+  
+  .calendar-day[data-day]:hover {
+    transform: translateY(-1px);
+  }
+  
+  /* Aktiv/valgt dag */
+  .calendar-day--active {
+    background: var(--yellow-light);
+    font-weight: 700;
+  }
+  
+  /* tomme celler (ikke-klikbare) */
+  .calendar span:not(.calendar-day):not(.calendar-day-label) {
+    height: 26px;
+  }
+  
+  /* =====================================
+     LISTE AF EVENTS
+  ===================================== */
+  
+  .events-list-section {
+    width: 100%;
+    padding: 22px 22px 26px;
+    background: var(--yellow-main);
+  }
+  
+  .events-list-heading {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 0.07em;
+    color: var(--green-dark);
+    margin: 0 0 14px;
+  }
+  
+  /* Event-kort (dynamisk) */
+  .event-card {
+    width: 100%;
+    background: var(--green-dark);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    margin-bottom: 14px;
+  }
+  
+  .event-image-wrapper {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+  }
+  
+  .event-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .event-content {
+    padding: 12px;
+  }
+  
+  .event-label {
+    font-size: 9px;
+    letter-spacing: 0.07em;
+    color: var(--yellow-main);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    display: inline-block;
+  }
+  
+  .event-title {
+    font-family: var(--font-display);
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0 0 6px;
+  }
+  
+  .event-meta {
+    font-size: 10px;
+    color: var(--text-muted);
+    margin: 0 0 6px;
+  }
+  
+  .event-description {
+    font-size: 10px;
+    margin: 0 0 8px;
+  }
+  
+  .event-link {
+    font-size: 10px;
+    color: var(--yellow-main);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .event-link span {
+    margin-left: 4px;
+  }
+  
+  /* Ingen event på valgt dato */
+  .events-empty {
+    font-size: 10px;
+    text-align: center;
+    color: var(--green-dark);
+    display: none;
+    margin-top: 6px;
+  }
+  
+  .events-empty--visible {
+    display: block;
+  }
+  
+  .events-note {
+    font-size: 10px;
+    text-align: center;
+    color: var(--green-dark);
+    margin-top: 10px;
+  }
