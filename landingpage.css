@@ -15,10 +15,16 @@
   .wave1 {
       position: absolute;
       top: -80px;
-      left: 0;
-      width: 100%;
-      height: auto;
-    }
+   }
+    
+  /* Keep icon and text side-by-side */
+  .offer-main {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
 
 /* Tekst oven på hero-billedet */
   .hero-content {
@@ -93,8 +99,8 @@
     position: relative;
     background-color: var(--green-dark);
     color: var(--white);
-    padding-bottom: 40px;
   }
+
   .welcome-inner {
     padding: 28px 20px 8px;
     text-align: center;
@@ -103,13 +109,13 @@
   .welcome-title {
     padding-top: 50px; 
     color: var(--yellow-light);
-    margin: 0 0 6px;
     line-height: 0.8;
+    margin-top: 18px;
+    margin-bottom: -20px;
   }
   
   .welcome-subtitle {
-    letter-spacing: 0.14em;
-    margin: 0 0 20px;
+    letter-spacing: 0.6px;
   }
   
 /*-------------- CARDS -------------*/
@@ -127,8 +133,10 @@
     background-color: var(--green-mid);
     border-radius: 18px;
     padding: 14px 15px;
-    
+    flex-wrap: wrap;
   }
+
+  .offer-main { display: flex; align-items: center; gap: 12px; width: 100%; flex-wrap: nowrap; }
   
   .offer-icon {
     width: 60px;
@@ -140,7 +148,15 @@
     align-items: center;
     justify-content: center;
     font-size: 20px;
-    margin-top: 25px;
+    margin-top: 0; /* center vertically with the text */
+    margin-right: 12px; /* space between icon and text */
+  }
+  .offer-icon img { max-width: 40px; max-height: 40px; display: block; }
+
+  /* Make the text block take remaining space so icon stays beside it */
+  .offer-text {
+    flex: 1 1 auto;
+    text-align: left;
   }
   
   .offer-text h4 {
@@ -158,21 +174,64 @@
   
 
   .offer-link {
-
     color: var(--yellow-light);
     text-decoration: none;
-    margin: 0 0 6px;
+    margin: 0 8px 6px 0;
     text-align: left;
-    margin-right: 185px;
+    display: inline-block;
   }
+  .less-link { display: none; }
+  /* open state: swap link visibility & show details */
+  .offer-card.open .less-link { display: inline-block; }
+  .offer-card.open .more-link { display: none; }
+  /* animate open/close using max-height (keeps layout flowing) */
+  .offer-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 320ms ease, opacity 240ms ease, padding 200ms ease, margin-top 200ms ease;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    pointer-events: none;
+  }
+  
+  .offer-card.open .offer-details {
+    max-height: 560px;
+    opacity: 1;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 8px;
+    text-align: left;
+  }
+
+  
+  .offer-details-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .offer-details-btn {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    min-width: 140px;
+    padding: 12px 18px;
+    border-radius: 10px;
+    border: none;
+    background: var(--yellow-main);
+    color: var(--text-dark);
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
 /* ---------- WAVE 2 ---------- */
   .wave2 {
     position: absolute;
-    top: 868px;
-    left: 0;
-    width: 100%;
-    height: auto;
-}
+  }
 
 /* ---------- GALLERI ---------- */
   
