@@ -276,3 +276,10 @@
       opacity: 1;
       pointer-events: auto;
     }
+
+    @media (min-width: 900px) {
+      .page {
+        max-width: 100%; /* or 100%, or 1100px */
+        
+      }
+    }

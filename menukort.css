@@ -218,7 +218,7 @@
   /* CLOSE BUTTON */
   /* ========================================================= */
   .close-menu-btn {
-    width: 50%;
+    width: 100%;
     background: var(--yellow-main);
     border: none;
     padding: 14px 0;
@@ -230,4 +230,101 @@
     justify-content: center;
     
   }
+  /* ========================================================= */
+/* DESKTOP STYLES */
+/* ========================================================= */
+@media (min-width: 900px) {
+
+  /* HERO */
+  .hero-img {
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+  }
+  .wave-top{
+    margin-top: -300px;
+  }
+
+  /* MENU INTRO */
+  .menu-intro {
+    padding: 80px 0;
+    text-align: center;
+  }
+  .menu-intro h1 {
+    font-size: 80px;
+    margin-top: -100px;
+  }
+
+  .menu-intro p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 22px;
+  }
+  /* BUTTONS */
+  .button-group {
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 0;
+    width: 100%;
+    gap: 70px;
+  }
+  .weekly {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 16px;
+    padding: 80px 100px;
+    align-items: start;
+    margin-top: -250px;
+    padding-bottom: 250px;
+  }
+
+  /* Title */
+  .weekly h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 84px;
+    padding-top: 100px;
+  }
+
+  /* Image */
+  .weekly-img {
+    grid-column: 2;
+    grid-row: 2 / 6;
+    max-width: 520px;
+    justify-self: end;
+  }
+
+  /* Text cleanup */
+  .weekly h3,
+  .weekly .price,
+  .weekly .desc,
+  .weekly .availability {
+    margin: 0;
+  }
+
+  .weekly h3 {
+    font-size: 48px;
+  }
+
+  .price {
+    font-size: 28px;
+
+  }
+
+  .desc {
+    max-width: 600px;
+  font-size: 28px;
+  }
+
+  .availability {
+   font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+.wave-bottom-bottom{
+    margin-top: -250px;
+  }
   
+}
