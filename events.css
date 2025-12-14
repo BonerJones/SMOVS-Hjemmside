@@ -1,219 +1,164 @@
 /* =====================================
      EVENTS HERO
-   ===================================== */
+===================================== */
   
   .events-hero {
     width: 100%;
     background: var(--green-dark);
-    padding: 28px 22px 36px;
+    padding: 28px 22px 6px;
   }
   
   .events-hero-title {
-    font-family: var(--font-display);
-    font-size: 24px;
     margin: 0 0 6px;
     letter-spacing: 0.06em;
-    text-transform: uppercase;
+    color: var(--yellow-light);
+    text-align: center;
   }
   
   .events-hero-subtitle {
-    font-size: 12px;
     max-width: 260px;
+    margin: 0 auto;
     line-height: 1.45;
-    margin: 0;
-  }
-  
-  /* Bølge, hvis du bruger billede */
-  .wave-divider {
-    width: 100%;
-    display: block;
-  }
-  
-  /* =====================================
-     KALENDER
-  ===================================== */
-  
-  .events-calendar-section {
-    width: 100%;
-    background: var(--green-dark);
-    padding: 0 18px 26px;
-  }
-  
-  .events-calendar-wrapper {
-    width: 100%;
-    background: var(--yellow-main);
-    border-radius: 18px;
-    padding: 14px 12px 18px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  }
-  
-  .events-calendar-title {
-    font-family: var(--font-display);
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 0.05em;
-    color: var(--green-dark);
-    margin: 0 0 2px;
-  }
-  
-  .events-calendar-month {
-    font-size: 10px;
-    font-weight: 500;
-    color: var(--green-dark);
-    margin: 0 0 10px;
-  }
-  
-  .calendar {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 4px;
-  }
-  
-  .calendar-day-label {
-    font-size: 9px;
+    color: var(--white);
     text-align: center;
-    color: var(--green-dark);
-    font-weight: 700;
   }
-  
-  /* Dage generelt */
-  .calendar-day {
-    width: 26px;
-    height: 26px;
-    margin: 2px auto 0;
-    border-radius: 50%;
-    background: var(--white);
-    color: var(--green-dark);
-    font-size: 11px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.15s ease;
-    border: none;
-    outline: none;
-  }
-  
-  /* Kun disse (med data-day) er klikbare */
-  .calendar-day[data-day] {
-    cursor: pointer;
-  }
-  
-  .calendar-day[data-day]:hover {
-    transform: translateY(-1px);
-  }
-  
-  /* Aktiv/valgt dag */
-  .calendar-day--active {
-    background: var(--yellow-light);
-    font-weight: 700;
-  }
-  
-  /* tomme celler (ikke-klikbare) */
-  .calendar span:not(.calendar-day):not(.calendar-day-label) {
-    height: 26px;
-  }
-  
-  /* =====================================
-     LISTE AF EVENTS
-  ===================================== */
-  
-  .events-list-section {
-    width: 100%;
-    padding: 22px 22px 26px;
-    background: var(--yellow-main);
-  }
-  
-  .events-list-heading {
-    font-family: var(--font-display);
-    text-transform: uppercase;
-    font-size: 16px;
-    letter-spacing: 0.07em;
-    color: var(--green-dark);
-    margin: 0 0 14px;
-  }
-  
-  /* Event-kort (dynamisk) */
-  .event-card {
-    width: 100%;
-    background: var(--green-dark);
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    margin-bottom: 14px;
-  }
-  
-  .event-image-wrapper {
-    width: 100%;
-    height: 150px;
-    overflow: hidden;
-  }
-  
-  .event-image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .event-content {
-    padding: 12px;
-  }
-  
-  .event-label {
-    font-size: 9px;
-    letter-spacing: 0.07em;
-    color: var(--yellow-main);
-    text-transform: uppercase;
-    margin-bottom: 4px;
-    display: inline-block;
-  }
-  
-  .event-title {
-    font-family: var(--font-display);
-    font-size: 14px;
-    text-transform: uppercase;
-    margin: 0 0 6px;
-  }
-  
-  .event-meta {
-    font-size: 10px;
-    color: var(--text-muted);
-    margin: 0 0 6px;
-  }
-  
-  .event-description {
-    font-size: 10px;
-    margin: 0 0 8px;
-  }
-  
-  .event-link {
-    font-size: 10px;
-    color: var(--yellow-main);
-    text-decoration: none;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-  }
-  
-  .event-link span {
-    margin-left: 4px;
-  }
-  
-  /* Ingen event på valgt dato */
-  .events-empty {
-    font-size: 10px;
-    text-align: center;
-    color: var(--green-dark);
-    display: none;
-    margin-top: 6px;
-  }
-  
-  .events-empty--visible {
-    display: block;
-  }
-  
-  .events-note {
-    font-size: 10px;
-    text-align: center;
-    color: var(--green-dark);
-    margin-top: 10px;
-  }
+
+/* Calendar Section */
+.events-calendar {
+  margin: 60px 30px;
+  text-align: center;
+}
+.calendar-label {
+  letter-spacing: 0.08em;
+  color: var(--yellow-main);
+  margin-bottom: 8px;
+}
+.calendar-card {
+  background-color: var(--yellow-main);
+  border-radius: 18px;
+  padding: 16px;
+}
+.calendar-weekdays,
+.calendar-dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+.calendar-weekdays span {
+  font-family: var(--font-secondary-bold);
+  font-size: 14px;
+  text-align: center;
+  color: var(--green-dark);
+}
+.calendar-dates button {
+  background: none;
+  border: none;
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  color: var(--text-dark);
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 50%;
+  cursor: default;
+}
+.calendar-dates button.interactive {
+  background-color: var(--white);
+  cursor: pointer;
+}
+.calendar-dates button.interactive.active {
+  background-color: var(--green-dark);
+  color: var(--white);
+}
+
+/* Events List Section */
+.event-card-1,
+.event-card-2,
+.event-card-3 {
+  display: block; /* Show all cards by default */
+}
+
+.events-heading {
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.back-link {
+  display: block;
+  font-family: var(--font-secondary-bold);
+  font-size: 14px;
+  color: var(--text-dark);
+  text-align: center;
+  text-decoration: none;
+  margin-top: 12px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.events-list {
+  margin: 20px 0;
+  background-color: var(--yellow-main);
+  align-content: center;
+}
+.events-list h2 {
+  margin-bottom: 16px;
+  text-align: center;
+}
+.event-card-1, .event-card-2, .event-card-3 {
+  background-color: var(--green-dark);
+  border-radius: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 70%;
+  margin: 0 auto 20px;
+}
+.event-card-1 h4, h5, p,
+.event-card-2 h4, h5, p,
+.event-card-3 h4, h5, p {
+  padding: 0 12px;
+}
+.event-card-1 img,
+.event-card-2 img,
+.event-card-3 img {
+  width: 100%;
+  border-radius: 10px;
+}
+.event-category {
+  color: var(--yellow-main);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.event-title {
+  color: var(--yellow-light);
+  margin: 0 0 8px;
+}
+.event-meta {
+  font-family: var(--font-secondary);
+  font-weight: 100;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.event-meta img {
+  width: 16px;
+  height: 16px;
+  color: var(--white);
+}
+.event-description {
+  margin-bottom: 62px;
+  color: var(--white);
+  font-weight: 100;
+  opacity: 0.8;
+}
+
+/* Note Section */
+.events-note {
+  text-align: center;
+  color: var(--text-dark);
+  margin-top: 20px;
+}
+ 
