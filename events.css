@@ -1,11 +1,15 @@
 /* =====================================
      EVENTS HERO
 ===================================== */
-  
+  .events-hero-image {
+    height: auto;
+    margin-top: -25px;
+  }
+
   .events-hero {
     width: 100%;
     background: var(--green-dark);
-    padding: 28px 22px 6px;
+    margin-top: 80px;
   }
   
   .events-hero-title {
@@ -22,11 +26,17 @@
     color: var(--white);
     text-align: center;
   }
+  .wave1 {
+    position: absolute;
+    top: 285px;
+
+  }
 
 /* Calendar Section */
 .events-calendar {
   margin: 60px 30px;
   text-align: center;
+  margin-bottom: 120px;
 }
 .calendar-label {
   letter-spacing: 0.08em;
@@ -68,6 +78,11 @@
 .calendar-dates button.interactive.active {
   background-color: var(--green-dark);
   color: var(--white);
+}
+
+.wave2 {
+  position: absolute;
+  top: 970px;
 }
 
 /* Events List Section */
@@ -116,7 +131,7 @@
 .event-card-1 h4, h5, p,
 .event-card-2 h4, h5, p,
 .event-card-3 h4, h5, p {
-  padding: 0 12px;
+  padding: 0 32px;
 }
 .event-card-1 img,
 .event-card-2 img,
@@ -150,6 +165,7 @@
 }
 .event-description {
   margin-bottom: 62px;
+  padding-bottom: 32px;
   color: var(--white);
   font-weight: 100;
   opacity: 0.8;
@@ -160,5 +176,11 @@
   text-align: center;
   color: var(--text-dark);
   margin-top: 20px;
+  margin-bottom: 100px;
 }
  
+.wave3 {
+  width: 100%;
+  display: block;
+  margin-top: -30px;
+}
