@@ -8,8 +8,8 @@
   position: relative;
 }
 
-.about-title { color: var(--yellow-light); margin: 0 0 8px; }
-.about-text { opacity: 0.9; }
+.about-title { color: var(--yellow-light); margin-bottom: 10px;}
+.about-text { opacity: 0.9; margin-bottom: 70px; }
 
 /* who section uses the gallery look */
 .who-inner { display: flex; flex-direction: column; gap: 12px; align-items: center;  }
