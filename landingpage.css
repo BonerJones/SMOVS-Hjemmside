@@ -10,20 +10,12 @@
     background-size: cover;
     background-position: center;
   }
-  
- /* ---------- WAVE ---------- */
-  .wave1 {
+    .wave1 {
       position: absolute;
       top: -80px;
    }
-    
-  /* Keep icon and text side-by-side */
-  .offer-main {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    width: 100%;
-  }
+
+
 
 
 /* Tekst oven på hero-billedet */
@@ -228,14 +220,19 @@
     cursor: pointer;
   }
   
-/* ---------- WAVE 2 ---------- */
-  .wave2 {
-    position: absolute;
-  }
 
+/* ---------- WAVE 2 (inside gallery) ---------- */
+  .gallery { position: relative; }
+  .gallery .wave2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-80%); /* move up by half its height */
+  }
 /* ---------- GALLERI ---------- */
   
   .gallery {
+
     background-color: var(--yellow-main);
     color: var(--text-dark);
     padding: 26px 16px 32px;
@@ -243,6 +240,7 @@
   }
   
   .gallery h2 {
+
     margin: 0 0 18px;
     text-align: center;
     padding-top: 15px;

@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SMOVS – Landingpage</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="landingpage.css" />
+  <link rel="stylesheet" href="om.css" />
+
   <script src="header.js"></script>
+   <script src="om.js"></script>
 
   <!-- Primær font til overskrifter -->
   <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@500;700&display=swap" rel="stylesheet">
@@ -39,8 +41,112 @@
         </ul>
       </nav>
     </header>
+    <main>
 
-        <!-- FOOTER -->
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-image">
+          <img src="images/om.jpg" alt="Om SMOVS" />
+      </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="about">
+         <img src="images/wave.svg" alt="Bølge" class="wave1"/>
+        <div class="about-inner">
+          <h1 class="about-title">Om os</h1>
+          <p class="about-text">SMOVS er et sted for mad, drikke og gode oplevelser. Vi kombinerer varme omgivelser med et udvalg af retter og drikke fra hele verden.</p>
+        </div>
+      </section>
+
+      <!-- HVEM (gallery style with half waves) -->
+      <section class="gallery who" id="who">
+        <img src="images/halfwave.svg" alt="Bølge" class="wave2" />
+        <h2>Hvem er vi?</h2>
+        <div class="who-inner">
+          <img src="images/hvem.jpg" alt="Hvem" class="who-img">
+          <p class="who-text">Vi er et hold af engagerede mennesker, der brænder for mad og gode stunder. Vores team består af køkkenfolk, bartendere og værter, som alle bidrager til stemningen hos SMOVS.</p>
+        </div>
+        <img src="images/halfwave2.svg" alt="Bølge" class="wave3" />
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq" id="faq">
+        <h2>FAQ</h2>
+        <div class="faq-list">
+          <!-- 6 faq items -->
+          <article class="faq-card">
+            <div class="faq-text">
+              <h4>Hvordan booker jeg et bord?</h4>
+              <div class="faq-answer" aria-hidden="true">Du kan booke et bord via vores kontaktformular eller ved at ringe til os på telefon.</div>
+            </div>
+            <button class="faq-toggle" aria-expanded="false">
+              <img src="images/icons/plus.svg" alt="Åbn" class="icon-plus">
+              <img src="images/icons/minus.svg" alt="Luk" class="icon-minus" style="display:none;">
+            </button>
+          </article>
+
+          <article class="faq-card">
+            <div class="faq-text">
+              <h4>Tilbyder I vegetariske retter?</h4>
+              <div class="faq-answer" aria-hidden="true">Ja – vores menu indeholder flere vegetariske og veganske muligheder, der skifter efter sæson.</div>
+            </div>
+            <button class="faq-toggle" aria-expanded="false">
+              <img src="images/icons/plus.svg" alt="Åbn" class="icon-plus">
+              <img src="images/icons/minus.svg" alt="Luk" class="icon-minus" style="display:none;">
+            </button>
+          </article>
+
+          <article class="faq-card">
+            <div class="faq-text">
+              <h4>Har I arrangementer for firmaer?</h4>
+              <div class="faq-answer" aria-hidden="true">Ja – vi kan skræddersy events, mad og drikke til jeres firmaarrangement. Kontakt os for tilbud.</div>
+            </div>
+            <button class="faq-toggle" aria-expanded="false">
+              <img src="images/icons/plus.svg" alt="Åbn" class="icon-plus">
+              <img src="images/icons/minus.svg" alt="Luk" class="icon-minus" style="display:none;">
+            </button>
+          </article>
+
+          <article class="faq-card">
+            <div class="faq-text">
+              <h4>Tilbyder I workshops?</h4>
+              <div class="faq-answer" aria-hidden="true">Vi tilbyder fra tid til anden workshops – følg vores events-side for opdateringer.</div>
+            </div>
+            <button class="faq-toggle" aria-expanded="false">
+              <img src="images/icons/plus.svg" alt="Åbn" class="icon-plus">
+              <img src="images/icons/minus.svg" alt="Luk" class="icon-minus" style="display:none;">
+            </button>
+          </article>
+
+          <article class="faq-card">
+            <div class="faq-text">
+              <h4>Kan jeg købe gavekort?</h4>
+              <div class="faq-answer" aria-hidden="true">Ja – kontakt os, så hjælper vi med et gavekort i ønsket beløb.</div>
+            </div>
+            <button class="faq-toggle" aria-expanded="false">
+              <img src="images/icons/plus.svg" alt="Åbn" class="icon-plus">
+              <img src="images/icons/minus.svg" alt="Luk" class="icon-minus" style="display:none;">
+            </button>
+          </article>
+
+          <article class="faq-card">
+            <div class="faq-text">
+              <h4>Har I allergivenlige retter?</h4>
+              <div class="faq-answer" aria-hidden="true">Vi kan tilpasse retter til allergier og intolerancer – oplys venligst ved bestilling.</div>
+            </div>
+            <button class="faq-toggle" aria-expanded="false">
+              <img src="images/icons/plus.svg" alt="Åbn" class="icon-plus">
+              <img src="images/icons/minus.svg" alt="Luk" class="icon-minus" style="display:none;">
+            </button>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="footer-logo"><img src="images/logo.svg"></div>
 

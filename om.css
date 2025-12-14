@@ -1,0 +1,68 @@
+/* OM page specific styles */
+
+.about {
+  background: var(--green-dark);
+  color: var(--white);
+  padding: 28px 16px;
+  text-align: center;
+  position: relative;
+  margin-top: 20
+}
+
+.about-title { color: var(--yellow-light); margin: 0 0 8px; }
+.about-text { opacity: 0.9; }
+
+/* who section uses the gallery look */
+.who-inner { display: flex; flex-direction: column; gap: 12px; align-items: center;  }
+.who-img { width: 100%; border-radius: 12px; }
+
+/* HERO & WAVES (copied from landingpage.css for standalone page) */
+.hero { position: relative; }
+.hero-image { width: 100%; overflow: hidden; }
+.hero-image img { display: block; width: 100%; height: auto; }
+.hero-content { position: absolute; inset: 0; display:flex; flex-direction:column; justify-content:flex-end; align-items:flex-start; margin-bottom:160px; }
+.hero-tagline { font-family: "SunriseMyFont"; font-size: 43px; font-weight: 500; line-height:1.3; color: var(--yellow-light); max-width:100%; text-align:center; margin:0 50px 12px; }
+
+/* wave that sits above the about/gallery sections */
+.wave1 { position: absolute; left: 0; top: -80px; width: 100%; height: auto; }
+
+/* gallery base styles (so om.html doesn't need landingpage.css) */
+.gallery { background-color: var(--yellow-main); color: var(--text-dark); padding: 26px 16px 32px; }
+.gallery h2 { margin: 0 0 18px; text-align: center; padding-top: 15px; z-index: 10; }
+.gallery-list { display: flex; flex-direction: column; gap: 12px; }
+.gallery-item img { display: block; width: 100%; border-radius: 18px; }
+
+/* FAQ styles */
+.faq { padding: 28px 16px 40px; background: var(--green-dark); }
+.faq h2 { text-align: center; margin-bottom: 16px; color: var(--yellow-light); font-family: var(--font-primary); font-size: 28px; }
+.faq-list { display: flex; flex-direction: column; gap: 14px; max-width: 380px; margin: 0 auto; }
+.faq-card {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  background: var(--green-mid);
+  color: var(--white);
+  border-radius: 18px;
+  padding: 14px 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.faq-text { flex: 1 1 auto; }
+.faq-text h4 { margin: 0 0 8px; color: var(--white); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 300ms ease, opacity 200ms ease; opacity: 0; color: rgba(255,255,255,0.95); }
+.faq-card.open .faq-answer { max-height: 320px; opacity: 1; }
+
+.faq-toggle { background: transparent; border: none; padding: 6px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; margin-left: auto; width: 40px; height: 40px; position: relative; }
+.faq-toggle img { display: none; }
+.faq-toggle::before { content: ''; display: block; width: 28px; height: 28px; background: var(--yellow-main); border-radius: 999px; -webkit-mask: url('images/icons/plus.svg') center/contain no-repeat; mask: url('images/icons/plus.svg') center/contain no-repeat; }
+.faq-card.open .faq-toggle::before { -webkit-mask: url('images/icons/minus.svg') center/contain no-repeat; mask: url('images/icons/minus.svg') center/contain no-repeat; }
+
+/* ensure waves overlap gallery similar to index */
+.gallery.who { position: relative; }
+.gallery.who .wave2 { position: absolute; left: 0; top: 0; transform: translateY(-90%); width: 100%; z-index: 2; }
+.gallery.who .wave3 { position: absolute; left: 0; bottom: 0; transform: translateY(80%); width: 100%; z-index: 2; }
+
+/* small screens: keep FAQ toggle to the right and compact */
+@media (max-width: 420px) {
+  .faq-card { flex-direction: row; }
+  .who-inner { padding: 8px; }
+}
