@@ -5,7 +5,7 @@
   .events-hero {
     width: 100%;
     background: var(--green-dark);
-    padding: 28px 22px 36px;
+    padding: 28px 22px 6px;
   }
   
   .events-hero-title {
@@ -22,21 +22,15 @@
     color: var(--white);
     text-align: center;
   }
-  
-  /* Hero Section */
-
-}
 
 /* Calendar Section */
 .events-calendar {
-  margin: 20px 0;
+  margin: 60px 30px;
   text-align: center;
 }
 .calendar-label {
-  font-family: var(--font-secondary-bold);
-  font-size: 12px;
   letter-spacing: 0.08em;
-  color: var(--text-dark);
+  color: var(--yellow-main);
   margin-bottom: 8px;
 }
 .calendar-card {
@@ -63,7 +57,7 @@
   font-size: 14px;
   color: var(--text-dark);
   text-align: center;
-  padding: 8px;
+  padding: 8px 0;
   border-radius: 50%;
   cursor: default;
 }
@@ -72,70 +66,98 @@
   cursor: pointer;
 }
 .calendar-dates button.interactive.active {
-  background-color: var(--yellow-light);
-  color: var(--text-dark);
+  background-color: var(--green-dark);
+  color: var(--white);
 }
 
 /* Events List Section */
+.event-card-1,
+.event-card-2,
+.event-card-3 {
+  display: block; /* Show all cards by default */
+}
+
+.events-heading {
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.back-link {
+  display: block;
+  font-family: var(--font-secondary-bold);
+  font-size: 14px;
+  color: var(--text-dark);
+  text-align: center;
+  text-decoration: none;
+  margin-top: 12px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
 .events-list {
   margin: 20px 0;
   background-color: var(--yellow-main);
+  align-content: center;
 }
-.events-list h3 {
-  font-family: var(--font-primary);
-  font-size: 24px;
+.events-list h2 {
   margin-bottom: 16px;
+  text-align: center;
 }
-.event-card {
+.event-card-1, .event-card-2, .event-card-3 {
   background-color: var(--green-dark);
   border-radius: 14px;
-  padding: 10px 10px 14px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 70%;
+  margin: 0 auto 20px;
 }
-.event-card img {
+.event-card-1 h4, h5, p,
+.event-card-2 h4, h5, p,
+.event-card-3 h4, h5, p {
+  padding: 0 12px;
+}
+.event-card-1 img,
+.event-card-2 img,
+.event-card-3 img {
   width: 100%;
   border-radius: 10px;
-  margin-bottom: 8px;
 }
 .event-category {
-  font-family: var(--font-secondary-bold);
-  font-size: 12px;
   color: var(--yellow-main);
   text-transform: uppercase;
   margin-bottom: 4px;
 }
 .event-title {
-  font-family: var(--font-primary);
-  font-size: 18px;
-  text-transform: uppercase;
+  color: var(--yellow-light);
   margin: 0 0 8px;
 }
 .event-meta {
   font-family: var(--font-secondary);
-  font-size: 12px;
+  font-weight: 100;
   color: var(--white);
   display: flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 8px;
 }
-.event-description {
-  font-family: var(--font-secondary);
-  font-size: 14px;
-  margin-bottom: 12px;
+
+.event-meta img {
+  width: 16px;
+  height: 16px;
+  color: var(--white);
 }
-.event-cta {
-  font-family: var(--font-secondary-bold);
-  font-size: 14px;
-  color: var(--yellow-main);
-  text-decoration: none;
+.event-description {
+  margin-bottom: 62px;
+  color: var(--white);
+  font-weight: 100;
+  opacity: 0.8;
 }
 
 /* Note Section */
 .events-note {
   text-align: center;
-  font-family: var(--font-secondary);
-  font-size: 12px;
   color: var(--text-dark);
   margin-top: 20px;
 }
