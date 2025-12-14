@@ -132,8 +132,6 @@
 .site-footer {
     background-color: var(--green-dark);
     color: var(--white);
-    font-family: "Zain";
-    padding: 20px 18px 28px;
   }
   
 .footer-logo {
@@ -144,6 +142,8 @@
 .footer-block {
     text-align: center;
     justify-content: center;
+    gap: 8px;
+    padding: 0;
   }
 
 .footer-block p {
@@ -153,43 +153,47 @@
 
 .footer-item1 {
     display: flex;
-    gap: 12px;
+    gap: 8px;
     justify-content: center;
     margin-left: -23px;
     
   }
 .footer-item2 {
-    gap: 12px;
+    gap: 8px;
 
   }
 .footer-item3 {
     display: flex;
-    gap: 12px;
+    gap: 8px;
     margin-bottom: 30px;
     justify-content: center;
   }
 .insta {
     display: flex;
-    gap: 12px;
+    gap: 8px;
     margin-bottom: 5px;
+    margin-left: -23px;
     justify-content: center;
   }
 .tele {
     display: flex;
-    gap: 12px;
+    gap: 8px;
     margin-bottom: 5px;
+    margin-left: -23px;
     justify-content: center;
   }
 .mail {
     display: flex;
-    gap: 12px;
+    gap: 8px;
     margin-bottom: 5px;
+    margin-left: -23px;
     justify-content: center;
   }
 .find {
     display: flex;
-    gap: 12px;
+    gap: 8px;
     margin-bottom: 5px;
+    margin-left: -23px;
     justify-content: center;
   }
 
@@ -207,7 +211,7 @@
 .footer-note {
     margin-top: 75px;
     opacity: 0.8;
-	text-align: center;
+	  text-align: center;
   }
 
 
