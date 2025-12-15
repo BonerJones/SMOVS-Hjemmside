@@ -348,6 +348,18 @@
       .burger {
         display: none;
       }
+<<<<<<< HEAD
+ .hero-image {
+    width: 100%;
+    height: 770px;
+    overflow: hidden;
+  }
+   .hero-img {
+    width: 100%;
+    height: 990px;
+    overflow: hidden;
+  }
+=======
 
       .hero-image {
         width: 100%;
@@ -355,6 +367,7 @@
         overflow: hidden;
       }
   
+>>>>>>> 27e4ccb15a4a09275a67ff1b170acd54b9026897
       /* Transform mobile menu into horizontal desktop nav */
       .mobile-menu {
         position: static;
