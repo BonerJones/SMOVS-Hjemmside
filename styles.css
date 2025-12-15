@@ -232,9 +232,14 @@
       transform: scaleY(0);
       opacity: 0;
       pointer-events: none;
-      transition: transform 400ms ease, opacity 400ms ease;
       z-index: 1200;
 
+    }
+
+    /* Only apply transitions when menu has been interacted with */
+    .mobile-menu.open,
+    .mobile-menu.open ~ * {
+      transition: transform 400ms ease, opacity 400ms ease;
     }
 
     .mobile-menu ul {
@@ -288,10 +293,6 @@
         display: none;
       }
 
-      /* Use desktop hero image */
-      .hero-image img {
-        content: url('images/event.jpg');
-      }
     }
 
     @media (min-width: 900px) {
@@ -299,7 +300,16 @@
       .burger {
         display: none;
       }
-
+ .hero-image {
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+  }
+   .hero-img {
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+  }
       /* Transform mobile menu into horizontal desktop nav */
       .mobile-menu {
         position: static;

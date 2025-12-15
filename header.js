@@ -38,4 +38,15 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') closeMenu();
   });
+
+  // Close menu when resizing from mobile/tablet to desktop
+  let previousWidth = window.innerWidth;
+  window.addEventListener('resize', function () {
+    const currentWidth = window.innerWidth;
+    // If crossing the desktop breakpoint (900px), close menu
+    if (previousWidth < 900 && currentWidth >= 900) {
+      closeMenu();
+    }
+    previousWidth = currentWidth;
+  });
 });

@@ -1,17 +1,22 @@
 .hero {
     position: relative;
+    min-height: clamp(280px, 44vh, 720px);
+    overflow: hidden;
 }
 
 .hero-img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
+    object-fit: cover;
 }
 
-.wave-top {
+.hero .wave-hero {
+    position: absolute;
+    left: 0;
+    bottom: 0;
     width: 100%;
-    display: block;
-    margin-top: -70px;
+    pointer-events: none;
 }
 
 /* -------------------------- */
@@ -19,8 +24,19 @@
 /* -------------------------- */
 
 .menu-intro {
-    padding: 0 22px 40px;
     background: var(--green);
+    position: relative;
+}
+
+
+
+.menu-intro .wave-welcome {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    pointer-events: none;
+    transform: translateY(-47%);
 }
 
 .menu-intro h1 {
@@ -65,15 +81,8 @@
     background-color: var(--yellow-main);
 }
 
-/* -------------------------- */
-/*        WAVE DIVIDER        */
-/* -------------------------- */
 
-.wave-bottom {
-    width: 100%;
-    display: block;
-    margin-top: -20px;
-}
+
 
 /* -------------------------- */
 /*       UGEBASERET RET       */
@@ -83,7 +92,7 @@
     background: var(--yellow-main);
     padding: 40px 22px;
     color: var(--green);
-    margin-top: -70px;
+    margin-top: 60px;
 }
 
 .weekly h2 {
@@ -120,11 +129,6 @@
     margin-bottom: 50px;
 }
 
-.wave-bottom-bottom {
-    width: 100%;
-    display: block;
-    margin-top: -70px;
-}
 
 
 
@@ -241,13 +245,10 @@
     height: 700px;
     overflow: hidden;
   }
-  .wave-top{
-    margin-top: -300px;
-  }
 
   /* MENU INTRO */
   .menu-intro {
-    padding: 80px 0;
+    padding: 200px 20px;
     text-align: center;
   }
   .menu-intro h1 {
