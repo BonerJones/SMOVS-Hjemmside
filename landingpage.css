@@ -5,23 +5,28 @@
     min-height: clamp(280px, 44vh, 720px);
     overflow: hidden;
   }
+
+  .hero .wave-hero {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+  }
   
   .hero-image {
     width: 100%;
     position: relative;
     overflow: hidden;
   }
-    .wave1 {
-      position: absolute;
-      top: -80px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 120%;
-      pointer-events: none;
-   }
 
-
-  .hero-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .hero-image img { 
+    display: block; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    filter: brightness(0.75);
+  }
 
 /* Tekst oven på hero-billedet */
   .hero-content {
@@ -29,15 +34,16 @@
     inset: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    margin-bottom: clamp(40px, 12vw, 160px);
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
     padding: 0 16px;
+    text-align: center;
   }
   
   .hero-tagline {
     font-family: "SunriseMyFont";
-    font-size: clamp(22px, 7vw, 43px);
+    font-size: clamp(32px, 9vw, 56px);
     font-weight: 500;
     line-height: 1.1;
     color: var(--yellow-light);
@@ -46,12 +52,17 @@
     margin: 0 50px 12px;
   }
 
-@media (min-width: 900px) {
-  .hero { min-height: clamp(420px, 56vh, 880px); }
-  .hero-content { justify-content: center; align-items: center; margin-bottom: 0; padding: 0 40px; }
-  .hero-tagline { font-size: clamp(36px, 6.5vw, 56px); max-width: 72%; }
-  .btn-cta { margin-top: 24px; }
-}
+  @media (min-width: 510px) {
+    .hero-tagline {
+      font-size: clamp(28px, 4vw, 40px);
+    }
+  }
+
+  @media (min-width: 900px) {
+    .hero-tagline {
+      font-size: clamp(48px, 5vw, 72px);
+    }
+  }
 
 /* ---------- KNAPPER ---------- */
   
@@ -66,7 +77,7 @@
     text-decoration: none;
     border: none;
     cursor: pointer;
-    margin-left: 26%;
+    margin-left: 0;
     margin-top: 25px;
     border: solid 2px var(--yellow-light);
     position: relative; /* Required for the ::after pseudo-element */
@@ -104,6 +115,14 @@
     position: relative;
     background-color: var(--green-dark);
     color: var(--white);
+  }
+
+  .welcome .wave-welcome {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    pointer-events: none;
   }
 
   .welcome-inner {
@@ -210,6 +229,27 @@
     text-align: left;
   }
 
+  @media (min-width: 900px) {
+    .offer-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .offer-link {
+      display: none;
+    }
+
+    .offer-details {
+      max-height: none;
+      opacity: 1;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      margin-top: 8px;
+      pointer-events: auto;
+    }
+  }
+
   
   .offer-details-img {
     display: block;
@@ -233,7 +273,14 @@
     cursor: pointer;
   }
   
-
+.wave2 {
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    pointer-events: none;
+  }
 /* ---------- WAVE 2 (inside gallery) ---------- */
   .gallery { position: relative; }
   .gallery .wave2 {

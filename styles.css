@@ -88,15 +88,15 @@
 	letter-spacing: 0.08em;
   }
 
-/* Header */
+/* Header - Smoothly Responsive */
 .site-header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 12px;
-    min-height: 64px;
+	padding: clamp(12px, 2vw, 24px) clamp(12px, 5vw, 80px);
+    min-height: clamp(64px, 8vh, 90px);
     position: sticky;
-    top: 0 ;
+    top: 0;
     z-index: 1000;
     background-color: var(--green-dark);
     transition: padding 200ms ease, min-height 200ms ease;
@@ -105,7 +105,7 @@
 .logo-link { display: inline-block; }
 .site-logo {
 	display: block;
-	height: 44px;
+	height: clamp(44px, 5vw, 70px);
 	width: auto;
 }
 
@@ -120,9 +120,8 @@
 	color: var(--accent);
 }
 
-/* Wrapper så siden ligner et mobil-layout på større skærme */
+/* Page wrapper - fully responsive */
 .page {
-    max-width: 402px;
     margin: 0 auto;
     background-color: var(--green-dark);
     min-height: 100vh;
@@ -283,9 +282,63 @@
       pointer-events: auto;
     }
 
-    @media (min-width: 900px) {
-      .page {
-        max-width: 100%; /* or 100%, or 1100px */
-        
+    @media (min-width: 510px) {
+      /* Hide all waves above 510px */
+      .wave-hero, .wave-welcome, .wave1, .wave2, .wave3 {
+        display: none;
       }
+
+      /* Use desktop hero image */
+      .hero-image img {
+        content: url('images/event.jpg');
+      }
+    }
+
+    @media (min-width: 900px) {
+      /* Hide burger menu on desktop */
+      .burger {
+        display: none;
+      }
+
+      /* Transform mobile menu into horizontal desktop nav */
+      .mobile-menu {
+        position: static;
+        transform: none;
+        opacity: 1;
+        pointer-events: auto;
+        background: transparent;
+        box-shadow: none;
+        max-width: none;
+        width: auto;
+        display: flex;
+        align-items: center;
+      }
+
+      .mobile-menu ul {
+        display: flex;
+        gap: clamp(24px, 3vw, 48px);
+        padding: 0;
+        align-items: center;
+      }
+
+      .mobile-menu li::after {
+        display: none;
+      }
+
+      .mobile-menu a {
+        color: var(--white);
+        font-size: clamp(14px, 1.2vw, 18px);
+        padding: 8px 0;
+        transition: color 0.3s ease;
+      }
+
+      .mobile-menu a:hover {
+        color: var(--yellow-main);
+      }
+
+      /* Hero adjustments for desktop */
+      .hero { min-height: clamp(420px, 56vh, 880px); }
+      .hero-content { justify-content: center; align-items: center; margin-bottom: 0; padding: 0 40px; }
+      .hero-tagline { font-size: clamp(36px, 6.5vw, 56px); max-width: 72%; }
+      .btn-cta { margin-top: 24px; }
     }
