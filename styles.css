@@ -127,6 +127,50 @@
     min-height: 100vh;
   }
 
+/* ---------- HERO SECTION (UNIFIED) ---------- */
+.hero {
+  position: relative;
+  min-height: clamp(280px, 44vh, 720px);
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image img { 
+  display: block; 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  filter: brightness(0.75);
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.hero-tagline {
+  font-family: "SunriseMyFont";
+  font-size: clamp(32px, 9vw, 56px);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--yellow-light);
+  max-width: 100%;
+  text-align: center;
+  margin: 0 50px 12px;
+}
+
 /* ---------- FOOTER ---------- */
   
 .site-footer {
@@ -293,6 +337,10 @@
         display: none;
       }
 
+      /* Hero responsive adjustments */
+      .hero-tagline {
+        font-size: clamp(28px, 4vw, 40px);
+      }
     }
 
     @media (min-width: 900px) {
@@ -300,16 +348,13 @@
       .burger {
         display: none;
       }
- .hero-image {
-    width: 100%;
-    height: 700px;
-    overflow: hidden;
-  }
-   .hero-img {
-    width: 100%;
-    height: 700px;
-    overflow: hidden;
-  }
+
+      .hero-image {
+        width: 100%;
+        height: 700px;
+        overflow: hidden;
+      }
+  
       /* Transform mobile menu into horizontal desktop nav */
       .mobile-menu {
         position: static;
@@ -347,8 +392,20 @@
       }
 
       /* Hero adjustments for desktop */
-      .hero { min-height: clamp(420px, 56vh, 880px); }
-      .hero-content { justify-content: center; align-items: center; margin-bottom: 0; padding: 0 40px; }
-      .hero-tagline { font-size: clamp(36px, 6.5vw, 56px); max-width: 72%; }
-      .btn-cta { margin-top: 24px; }
+      .hero { 
+        min-height: clamp(420px, 56vh, 880px); 
+      }
+      .hero-content { 
+        justify-content: center; 
+        align-items: center; 
+        margin-bottom: 0; 
+        padding: 0 40px; 
+      }
+      .hero-tagline { 
+        font-size: clamp(48px, 5vw, 72px); 
+        max-width: 72%; 
+      }
+      .btn-cta { 
+        margin-top: 24px; 
+      }
     }
