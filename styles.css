@@ -401,7 +401,7 @@ body:not(.index-page) .wave-welcome {
 
     @media (min-width: 510px) {
       /* Hide all waves above 510px */
-      .wave-hero, .wave-welcome, .wave2, .wave3 {
+      .wave-hero, .wave-welcome, .wave2, .wave3, .wave4{
         display: none;
       }
 
