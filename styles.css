@@ -229,6 +229,16 @@
   pointer-events: none;
 }
 
+/* Adjustable wave positioning for menukort, events, lokaler, om pages */
+/* Change these values to move waves up/down (negative = up, positive = down) */
+body:not(.index-page) .hero .wave-hero {
+  transform: translateY(-50px); /* Adjust this to move hero wave up/down */
+}
+
+body:not(.index-page) .wave-welcome {
+  transform: translateY(-50px); /* Adjust this to move welcome wave up/down */
+}
+
 /* ---------- FOOTER ---------- */
   
 .site-footer {
