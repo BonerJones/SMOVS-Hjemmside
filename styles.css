@@ -107,7 +107,7 @@
       }
       h5 {
       font-family: var(--font-secondary-bold);
-      font-size: 24px;
+      font-size: 18px;
       letter-spacing: 0.08em;
       }
       h6 {
@@ -118,7 +118,7 @@
       
       p {
       font-family: var(--font-secondary);
-      font-size: 16px;
+      font-size: 20px;
       letter-spacing: 0.08em;
       }
     
