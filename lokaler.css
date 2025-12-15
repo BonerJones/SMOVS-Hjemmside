@@ -1,0 +1,148 @@
+/* ===========================
+   Vores lokaler – kun mobil (402px)
+   =========================== */
+
+/* Overstyrer global .page baggrund, så denne side får gul baggrund som i designet */
+.lokaler-page {
+    background-color: var(--yellow-main);
+  }
+  
+  /* ---------- HERO ---------- */
+  
+  .lokaler-hero {
+    width: 100%;
+    background-color: var(--yellow-main);
+  }
+  
+  .lokaler-hero-img {
+    width: 100%;
+    display: block;
+  }
+  
+  /* Grøn blok med overskrift + tekst */
+  .lokaler-hero-inner {
+    background-color: var(--green-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 62px 28px 80px;
+  }
+  
+  .lokaler-title {
+    margin: 40px 0 20px;
+    line-height: 0.8;
+    color: var(--yellow-light);
+  }
+  
+  .lokaler-intro {
+    margin: 0 0 40px;
+    line-height: 1.6;
+  }
+  
+  /* ---------- LOKALE-KORT ---------- */
+  
+  .lokaler-list {
+    padding: 110px 80px 48px;
+    background-color: var(--yellow-main);
+  }
+  
+  .lokale-card {
+    background-color: var(--green-mid);
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 55px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  .lokale-image {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+  
+  .lokale-card-inner {
+    padding: 14px 16px 18px;
+    color: var(--white);
+  }
+  
+  .lokale-meta {
+    margin: 0 0 4px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.8;
+  }
+  
+  .lokale-heading {
+    margin: 0 0 8px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  
+  .lokale-text {
+    margin: 0 0 14px;
+    line-height: 1.6;
+    opacity: 0.8;
+  }
+  
+  /* Genbrugelig "Book lokale"-knap */
+  .lokale-btn {
+    display: inline-block;
+    padding: 15px 53px;
+    border-radius: 14px;
+    background-color: var(--yellow-main);
+    color: var(--text-dark);
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .lokale-btn:hover {
+    filter: brightness(1.05);
+  }
+  
+  /* ---------- CTA-SEKTION ---------- */
+  
+  .lokaler-cta {
+    background-color: var(--green-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 115px 28px 46px;
+  }
+  
+  .lokaler-cta-title {
+    margin: 0 0 25px;
+    color: var(--yellow-main);
+    line-height: 0.8;
+  }
+  
+  .lokaler-cta-text {
+    margin: 0 0 18px;
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  /* CTA-knappen nederst – samme stil, men lidt mere luft */
+  .lokaler-cta-btn {
+    padding-inline: 28px;
+    margin-bottom: 200px;
+  }
+
+  /* ---------- Wave's ---------- */
+  .wave1 {
+    position: absolute;
+    top: 280px;
+  }
+  .wave2 {
+    position: absolute;
+    top: 690px;
+  }
+  .wave3 {
+    position: absolute;
+    top: 1900px;
+  }
+  .wave4 {
+    position: absolute;
+    top: 2280px;
+  }
