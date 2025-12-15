@@ -83,6 +83,14 @@
   background-color: var(--green-dark);
   color: var(--white);
 }
+@media (min-width: 900px) {
+  .events-calendar {
+    padding: 0 300px;
+  }
+  .calendar-dates {
+    gap: 25px;
+  }
+}
 
 /* Events List Section */
 .event-card-1,
@@ -116,7 +124,9 @@
   margin: 20px 0;
   background-color: var(--yellow-main);
   align-content: center;
+  display: block; /* Default block layout for mobile */
 }
+
 .wave2 {
     position: absolute;
     bottom: -1px;
@@ -191,13 +201,29 @@
   font-weight: 100;
   opacity: 0.8;
 }
+ @media (min-width: 900px) {
+  .events-list {
+    display: block; /* Keep the overall layout block */
+  }
+
+  .event-cards-container {
+    display: flex; /* Use flexbox for side-by-side layout */
+    justify-content: space-between; /* Add space between cards */
+    gap: 10px; /* Optional: Add spacing between cards */
+  }
+
+  .event-card-1,
+  .event-card-2,
+  .event-card-3 {
+    flex: 1; /* Make all cards equal width */
+    max-width: 28%; /* Optional: Limit the width of each card */
+  }
 
 /* Note Section */
 .events-note {
   text-align: center;
   color: var(--text-dark);
-  margin-top: 10px;
-  margin-bottom: 100px;
+  margin-top: 20px;
 }
  
 .wave3 {
