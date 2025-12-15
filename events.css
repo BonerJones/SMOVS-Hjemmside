@@ -1,10 +1,5 @@
-/* EVENTS HERO */
+/* EVENTS INTRO SECTION */
 @media screen and (min-width: 900px) {
-    .events-hero-image {
-      height: auto;
-      width: 100%;
-      margin-top: -100px;
-    }
     .events-hero {
       width: 100%;
       background: var(--green-dark);
@@ -31,12 +26,6 @@
 }
   
 @media screen and (max-width: 899px) {
-  .events-hero-image {
-    height: auto;
-    width: 100%;
-    margin-top: -25px;
-  }
-
   .events-hero {
     width: 100%;
     background: var(--green-dark);
@@ -64,6 +53,7 @@
   .wave1-desktop {
     display: none;
   }
+}
 
 /* Calendar Section */
 .events-calendar {

@@ -7,16 +7,11 @@
     background-color: var(--yellow-main);
   }
   
-  /* ---------- HERO ---------- */
+  /* ---------- LOKALER INTRO ---------- */
   
   .lokaler-hero {
     width: 100%;
     background-color: var(--yellow-main);
-  }
-  
-  .lokaler-hero-img {
-    width: 100%;
-    display: block;
   }
   
   /* Grøn blok med overskrift + tekst */

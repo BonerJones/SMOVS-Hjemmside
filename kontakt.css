@@ -1,10 +1,4 @@
-
-  /* HERO */
-  .hero {
-    text-align: center;
-    padding: 24px 16px;
-  }
-  
+  /* KONTAKT HERO - Custom Styles */
   .hero h1 {
     margin-bottom: 8px;
     color: var(--yellow-main);
@@ -13,12 +7,6 @@
   .hero p {
     margin-bottom: 16px;
     color: white;
-  }
-  
-  .hero-img {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 16px;
   }
   
   /* BUTTONS */
@@ -150,10 +138,11 @@
     font-size: 28px;
   }
 
-  .hero-img {
+  .hero-image {
     grid-area: image;
     max-width: 520px;
     justify-self: end;
+    height: auto;
   }
   .wave2{
     min-width: 100%;
