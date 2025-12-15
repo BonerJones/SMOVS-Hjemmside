@@ -132,17 +132,17 @@
   /* ---------- Wave's ---------- */
   .wave1 {
     position: absolute;
-    top: 280px;
+    top: 240px;
   }
   .wave2 {
     position: absolute;
-    top: 690px;
+    top: 640px;
   }
   .wave3 {
     position: absolute;
-    top: 1900px;
+    top: 1850px;
   }
   .wave4 {
     position: absolute;
-    top: 2280px;
+    top: 2220px;
   }
