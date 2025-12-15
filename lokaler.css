@@ -3,15 +3,22 @@
    =========================== */
 
 /* Overstyrer global .page baggrund, så denne side får gul baggrund som i designet */
-.lokaler-page {
-    background-color: var(--yellow-main);
-  }
+
   
   /* ---------- LOKALER INTRO ---------- */
   
   .lokaler-hero {
+    position: relative;
     width: 100%;
     background-color: var(--yellow-main);
+  }
+
+  .lokaler-hero .wave-welcome {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    pointer-events: none;
   }
   
   /* Grøn blok med overskrift + tekst */
@@ -125,10 +132,6 @@
   }
 
   /* ---------- Wave's ---------- */
-  .wave1 {
-    position: absolute;
-    top: 240px;
-  }
   .wave2 {
     position: absolute;
     top: 640px;
@@ -136,8 +139,4 @@
   .wave3 {
     position: absolute;
     top: 1850px;
-  }
-  .wave4 {
-    position: absolute;
-    top: 2220px;
   }

@@ -288,7 +288,7 @@
     bottom: -1px;
     left: 50%;
     transform: translateX(-50%);
-    width: 120%;
+    width: 100%;
     pointer-events: none;
   }
 /* ---------- WAVE 2 (inside gallery) ---------- */

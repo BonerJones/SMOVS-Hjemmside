@@ -175,6 +175,14 @@
   overflow: hidden;
 }
 
+.hero .wave-hero {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
 .hero-image {
   width: 100%;
   position: relative;
@@ -210,6 +218,15 @@
   max-width: 100%;
   text-align: center;
   margin: 0 50px 12px;
+}
+
+/* ---------- WAVE POSITIONING ---------- */
+.wave-welcome {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
 }
 
 /* ---------- FOOTER ---------- */
@@ -374,7 +391,7 @@
 
     @media (min-width: 510px) {
       /* Hide all waves above 510px */
-      .wave-hero, .wave-welcome, .wave1, .wave2, .wave3 {
+      .wave-hero, .wave-welcome, .wave2, .wave3 {
         display: none;
       }
 
