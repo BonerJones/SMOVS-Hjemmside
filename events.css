@@ -115,8 +115,11 @@
   margin-top: 12px;
 }
 
-.back-link:hover {
-  text-decoration: underline;
+/* Hover effects only for devices with hover capability (not mobile) */
+@media (hover: hover) {
+  .back-link:hover {
+    text-decoration: underline;
+  }
 }
 
 .events-list {

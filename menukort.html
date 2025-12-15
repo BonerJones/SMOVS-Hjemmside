@@ -36,8 +36,7 @@
       <!-- Mobile dropdown menu (hidden by default) -->
       <nav id="mobileMenu" class="mobile-menu" aria-hidden="true" aria-labelledby="mobileMenuLabel">
         <ul>
-          <li><a href="index.html">Forside</a></li>
-          <li><a href="menukort.html">Menukort</a></li>
+          <li><a href="menukort.html" class="active">Menukort</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a href="lokaler.html">Lokaler</a></li>
           <li><a href="om.html">Om</a></li>
@@ -83,17 +82,21 @@
       <section class="weekly">
         <img src="images/halfwave.svg" alt="Bølge" class="wave2" />
         <h2>Ugens Ret</h2>
-        <h5 class="availability">Tilgængelig onsdag – lørdag denne uge</h5>
 
-        <img src="images/ugens.jpg" class="weekly-img" alt="Ugens ret">
+        <div class="weekly-content">
+          <div class="weekly-text">
+            <h3>FLAMMKUCHEN + FADØL</h3>
 
-        <h3>FLAMMKUCHEN + FADØL</h3>
-        <h3 class="price">65 kr.</h3>
 
-        <p class="desc">
-          Nyd en sprød flamkuchen og en kold fadøl for kun 65 kr. – den perfekte
-          kombination til en hyggelig aften hos SMOVS.
-        </p>
+            <p class="desc">
+              Nyd en sprød flamkuchen og en kold fadøl for kun 65 kr. – den perfekte
+              kombination til en hyggelig aften hos SMOVS.
+            </p>
+            <h3 class="price">65 kr.</h3>
+            <h5 class="availability">Tilgængelig onsdag – lørdag denne uge</h5>
+          </div>
+          <img src="images/ugens.jpg" class="weekly-img" alt="Ugens ret">
+        </div>
         <img src="images/halfwave2.svg" alt="Bølge" class="wave3" />
       </section>
     </main>
@@ -153,14 +156,44 @@
     <div class="menu-inner">
 
       <!-- DRINK PAGE IMAGES -->
-      <div class="menu-page"><img src="images/menu/drink1.jpg"></div>
-      <div class="menu-page"><img src="images/menu/drink2.jpg"></div>
-      <div class="menu-page"><img src="images/menu/drink3.jpg"></div>
-      <div class="menu-page"><img src="images/menu/drink4.jpg"></div>
-      <div class="menu-page"><img src="images/menu/drink5.jpg"></div>
+      <div class="menu-page">
+        <button class="menu-close-x" onclick="closeMenu()">
+          <img src="images/icons/x.svg" alt="Luk" />
+        </button>
+        <img src="images/menu/drink1.jpg">
+      </div>
+      <div class="menu-page">
+        <button class="menu-close-x" onclick="closeMenu()">
+          <img src="images/icons/x.svg" alt="Luk" />
+        </button>
+        <img src="images/menu/drink2.jpg">
+      </div>
+      <div class="menu-page">
+        <button class="menu-close-x" onclick="closeMenu()">
+          <img src="images/icons/x.svg" alt="Luk" />
+        </button>
+        <img src="images/menu/drink3.jpg">
+      </div>
+      <div class="menu-page">
+        <button class="menu-close-x" onclick="closeMenu()">
+          <img src="images/icons/x.svg" alt="Luk" />
+        </button>
+        <img src="images/menu/drink4.jpg">
+      </div>
+      <div class="menu-page">
+        <button class="menu-close-x" onclick="closeMenu()">
+          <img src="images/icons/x.svg" alt="Luk" />
+        </button>
+        <img src="images/menu/drink5.jpg">
+      </div>
 
       <!-- FOOD PAGE -->
-      <div class="menu-page"><img src="images/menu/mad.jpg"></div>
+      <div class="menu-page">
+        <button class="menu-close-x" onclick="closeMenu()">
+          <img src="images/icons/x.svg" alt="Luk" />
+        </button>
+        <img src="images/menu/mad.jpg">
+      </div>
     </div>
 
     <!-- NAVIGATION BUTTONS -->
@@ -170,7 +203,9 @@
     </div>
 
     <!-- CLOSE BUTTON -->
-    <button id="closeMenu" class="close-menu-btn">✕ Luk vindue</button>
+    <button id="closeMenu" class="close-menu-btn">
+      <img src="images/icons/x.svg" alt="Luk" />
+    </button>
   </div>
 
 
