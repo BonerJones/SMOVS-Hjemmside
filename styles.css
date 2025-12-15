@@ -145,6 +145,7 @@
     justify-content: center;
     gap: 8px;
     padding: 0;
+    margin-bottom: 60px;
   }
 
 .footer-block p {
@@ -210,9 +211,9 @@
     line-height: 1.4;
   }
 .footer-note {
-    margin-top: 75px;
     opacity: 0.8;
 	  text-align: center;
+    margin: auto 45px 55px;
   }
 
 
