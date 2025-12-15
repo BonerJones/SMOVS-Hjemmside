@@ -201,6 +201,7 @@
   font-weight: 100;
   opacity: 0.8;
 }
+
  @media (min-width: 900px) {
   .events-list {
     display: block; /* Keep the overall layout block */

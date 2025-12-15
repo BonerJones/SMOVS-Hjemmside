@@ -5,17 +5,18 @@
 .menu-intro {
     background: var(--green);
     position: relative;
+    padding-top: 60px;
 }
 
 
 
 .menu-intro .wave-welcome {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    pointer-events: none;
-    transform: translateY(-47%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
+
 }
 
 .menu-intro h1 {
