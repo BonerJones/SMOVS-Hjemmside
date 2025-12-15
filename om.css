@@ -10,6 +10,15 @@
   position: relative;
 }
 
+.about .wave-welcome {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
+
+}
+
 .about-title {
   color: var(--yellow-light);
   margin-bottom: 10px;
@@ -18,14 +27,6 @@
 .about-text {
   opacity: 0.9;
   margin-bottom: 70px;
-}
-
-.wave1 {
-  position: absolute;
-  left: 0;
-  top: -80px;
-  width: 100%;
-  height: auto;
 }
 
 /* -------------------------- */

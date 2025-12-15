@@ -1,62 +1,39 @@
 /* EVENTS INTRO SECTION */
+.events-hero {
+  position: relative;
+  width: 100%;
+  background: var(--green-dark);
+}
+
+.events-hero .wave-welcome {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
+
+}
+
+.events-hero-title {
+  margin: 0 0 6px;
+  letter-spacing: 0.06em;
+  color: var(--yellow-light);
+  text-align: center;
+}
+
+.events-hero-subtitle {
+  max-width: 260px;
+  margin: 0 auto;
+  line-height: 1.45;
+  color: var(--white);
+  text-align: center;
+}
+
 @media screen and (min-width: 900px) {
     .events-hero {
-      width: 100%;
-      background: var(--green-dark);
       margin-top: 80px;
     }
-    .events-hero-title {
-      margin: 0 0 6px;
-      letter-spacing: 0.06em;
-      color: var(--yellow-light);
-      text-align: center;
-    }
-    
-    .events-hero-subtitle {
-      max-width: 260px;
-      margin: 0 auto;
-      line-height: 1.45;
-      color: var(--white);
-      text-align: center;
-    }
   
-}
-  
-<<<<<<< HEAD
-@media screen and (max-width: 899px) {
-=======
-
-  .events-hero-image {
-    height: auto;
-    width: 100%;
-    margin-top: -25px;
-  }
-
->>>>>>> d5fe643fbb16e93be3630281b7ba4a3d46fca11f
-  .events-hero {
-    width: 100%;
-    background: var(--green-dark);
-    margin-top: 80px;
-  }
-  
-  .events-hero-title {
-    margin: 0 0 6px;
-    letter-spacing: 0.06em;
-    color: var(--yellow-light);
-    text-align: center;
-  }
-  
-  .events-hero-subtitle {
-    max-width: 260px;
-    margin: 0 auto;
-    line-height: 1.45;
-    color: var(--white);
-    text-align: center;
-  }
-  .wave1 {
-    position: absolute;
-    top: 230px;
-  }
 }
 
 /* Calendar Section */
@@ -107,11 +84,6 @@
   color: var(--white);
 }
 
-.wave2 {
-  position: absolute;
-  top: 945px;
-}
-
 /* Events List Section */
 .event-card-1,
 .event-card-2,
@@ -140,10 +112,26 @@
 }
 
 .events-list {
+  position: relative;
   margin: 20px 0;
   background-color: var(--yellow-main);
   align-content: center;
 }
+.wave2 {
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    pointer-events: none;
+  }
+.events-list .wave2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-80%); /* move up by half its height */
+}
+
 .events-list h2 {
   margin-bottom: 16px;
   text-align: center;
