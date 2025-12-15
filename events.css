@@ -230,11 +230,10 @@
     flex: 1; /* Make all cards equal width */
     max-width: 28%; /* Optional: Limit the width of each card */
   }
-
+ }
 /* Note Section */
 .events-note {
   text-align: center;
   color: var(--text-dark);
   margin-top: 20px;
-}
 }
