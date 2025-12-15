@@ -94,11 +94,12 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 12px;
-    height: 15vh;
+    min-height: 64px;
     position: sticky;
     top: 0 ;
     z-index: 1000;
     background-color: var(--green-dark);
+    transition: padding 200ms ease, min-height 200ms ease;
 }
 
 .logo-link { display: inline-block; }
