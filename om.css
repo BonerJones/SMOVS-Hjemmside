@@ -254,3 +254,10 @@
     padding: 8px;
   }
 }
+@media (min-width: 510px) {
+  .yellow-box {
+    width: 100%; /* Full width */
+    background-color: var(--yellow-main); /* Use the yellow-main color */
+    padding: 40px; /* Add some padding inside the box */
+  }
+}
