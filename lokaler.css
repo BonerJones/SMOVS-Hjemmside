@@ -30,7 +30,7 @@
   }
   
   .lokaler-title {
-    margin: 40px 0 20px;
+    margin-top: -20px;
     line-height: 0.8;
     color: var(--yellow-light);
   }

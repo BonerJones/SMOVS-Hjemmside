@@ -1,468 +1,520 @@
-/* ---------- HERO ---------- */
-  
-  .hero {
-    position: relative;
-    min-height: clamp(280px, 44vh, 720px);
-    overflow: hidden;
-  }
+/* ========================================
+   HERO SEKTION - Forsidebillede med tekst
+   ======================================== */
 
-
-
-  .hero .wave-hero {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    pointer-events: none;
-  }
-  
-  .hero-image {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-image img { 
-    display: block; 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover;
-    filter: brightness(0.75);
-  }
-
-/* Tekst oven på hero-billedet */
-  .hero-content {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 60px;
-    padding: 0 16px;
-    text-align: center;
-  }
-  
-  .hero-tagline {
-    font-family: "SunriseMyFont";
-    font-size: clamp(32px, 9vw, 56px);
-    font-weight: 500;
-    line-height: 1.1;
-    color: var(--yellow-light);
-    max-width: 100%;
-    text-align: center;
-    margin: 0 50px 12px;
-  }
-
-  @media (min-width: 510px) {
-    .hero-tagline {
-      font-size: clamp(28px, 4vw, 40px);
-    }
-       .hero-image img {
-        content: url('images/event.jpg');
-      }
-  }
-
-  @media (min-width: 900px) {
-    .hero-tagline {
-      font-size: clamp(48px, 5vw, 72px);
-    }
-  }
-
-/* ---------- KNAPPER ---------- */
-  
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 28px;
-    border-radius: 999px;
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    margin-left: 0;
-    margin-top: 25px;
-    border: solid 2px var(--yellow-main);
-    position: relative; /* Required for the ::after pseudo-element */
-    overflow: hidden; /* Ensures the after effect stays within the button */
-  }
-  
-  .btn-cta {
-    background-color: var(--yellow-main);
-    color: var(--text-dark);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
-    margin-top: 75px;
-  }
-  .btn::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;    
+.hero {
+  position: relative;
+  min-height: clamp(280px, 44vh, 720px); /* Responsiv højde */
+  overflow: hidden;
 }
 
+/* Bølge-dekorationselement i bunden af hero */
+.hero .wave-hero {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  pointer-events: none; /* Tillad klik gennem bølgen */
+}
 
-  /* Hover effects only on desktop */
-  @media (min-width: 900px) {
-    .btn:hover::after {
-        width: 100%; /* Expands the underline on hover */
-    }
+/* Hero-billede container */
+.hero-image {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
 
-    .btn:hover {
-        background-color: transparent;
-        color: var(--yellow-light);
-        border: solid 2px var(--yellow-light);
-    }
+/* Hero-billede styling */
+.hero-image img { 
+  display: block; 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; /* Fyld området uden at forvrænge */
+  filter: brightness(0.75); /* Gør billedet mørkere for bedre tekstlæsbarhed */
+}
+
+/* Tekst-indhold ovenpå hero-billedet */
+.hero-content {
+  position: absolute;
+  inset: 0; /* Dækker hele hero-området */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  padding: 0 16px;
+  text-align: center;
+}
+
+/* Hovedoverskrift på forsiden */
+.hero-tagline {
+  font-family: "SunriseMyFont";
+  font-size: clamp(32px, 9vw, 56px); /* Skalerer med skærmstørrelse */
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--yellow-light);
+  max-width: 100%;
+  text-align: center;
+  margin: 0 50px 12px;
+}
+
+/* Tablet-størrelse */
+@media (min-width: 510px) {
+  .hero-tagline {
+    font-size: clamp(28px, 4vw, 40px);
   }
-
-  
-/* ---------- WELCOME / VI TILBYDER ---------- */
-  
-  .welcome {
-    position: relative;
-    background-color: var(--green-dark);
-    color: var(--white);
+  .hero-image img {
+    content: url('images/event.jpg');
   }
+}
 
-  .welcome .wave-welcome {
-    position: absolute;
-    left: 0;
-    top: 0;
+/* Desktop-størrelse */
+@media (min-width: 900px) {
+  .hero-tagline {
+    font-size: clamp(48px, 5vw, 72px);
+  }
+}
+
+/* ========================================
+   KNAPPER - Call-to-action knapper
+   ======================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 28px;
+  border-radius: 999px; /* Fuld afrundede hjørner */
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  border: solid 2px var(--yellow-main);
+  cursor: pointer;
+  margin-top: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Primær call-to-action knap */
+.btn-cta {
+  background-color: var(--yellow-main);
+  color: var(--text-dark);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35); /* Dybdeeffekt */
+  margin-top: 75px;
+}
+
+/* Understregseffekt til hover */
+.btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+}
+
+/* Hover-effekt kun på desktop */
+@media (min-width: 900px) {
+  .btn:hover::after {
     width: 100%;
-    pointer-events: none;
   }
 
-  .welcome-inner {
-    padding: 28px 20px 8px;
-    text-align: center;
-  }
-  
-  .welcome-title {
-    padding-top: 70px; 
+  .btn:hover {
+    background-color: transparent;
     color: var(--yellow-light);
-    line-height: 0.8;
-    margin-top: 18px;
-    margin-bottom: -20px;
+    border: solid 2px var(--yellow-light);
   }
-  
-  .welcome-subtitle {
-    letter-spacing: 0.6px;
+}
+
+/* ========================================
+   WELCOME SEKTION - "Vi tilbyder" område
+   ======================================== */
+
+.welcome {
+  position: relative;
+  background-color: var(--green-dark);
+  color: var(--white);
+}
+
+/* Bølge-dekoration i toppen */
+.welcome .wave-welcome {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+/* Indre indhold med padding */
+.welcome-inner {
+  padding: 28px 20px 8px;
+  text-align: center;
+}
+
+/* "Vi tilbyder" overskrift */
+.welcome-title {
+  padding-top: 70px;
+  color: var(--yellow-light);
+  line-height: 0.8;
+  margin-top: 18px;
+  margin-bottom: -20px;
+}
+
+/* Undertekst */
+.welcome-subtitle {
+  letter-spacing: 0.6px;
+}
+/* ========================================
+   TILBUDSKORT - Vi tilbyder kort
+   ======================================== */
+
+/* Liste af tilbudskort */
+.offer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 100px;
+}
+
+/* Enkelt tilbudskort */
+.offer-card {
+  display: flex;
+  gap: 14px;
+  background-color: var(--green-mid);
+  border-radius: 18px;
+  padding: 14px 15px;
+  flex-wrap: wrap;
+}
+
+/* Hovedindhold i kort (ikon + tekst) */
+.offer-main { 
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+  width: 100%; 
+  flex-wrap: nowrap; 
+}
+
+/* Ikon i venstre side */
+.offer-icon {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0; /* Behold størrelse */
+  border-radius: 999px; /* Cirkelform */
+  background-color: var(--yellow-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-right: 12px;
+}
+
+/* Billede inde i ikon */
+.offer-icon img { 
+  max-width: 40px; 
+  max-height: 40px; 
+  display: block; 
+}
+
+/* Tekstområde (fylder resten af pladsen) */
+.offer-text {
+  flex: 1 1 auto;
+  text-align: left;
+}
+
+/* Overskrift i kort */
+.offer-text h4 {
+  letter-spacing: 0.08em;
+  margin: 0 0 4px;
+  text-align: left;
+}
+
+/* Undertekst i kort */
+.offer-text h6 {
+  margin: 0 0 6px;
+  opacity: 80%;
+  text-align: left;
+  letter-spacing: 0.08em;
+}
+/* "Læs mere" / "Luk" links */
+.offer-link {
+  color: var(--yellow-light);
+  text-decoration: none;
+  margin: 0 8px 6px 0;
+  text-align: left;
+  display: inline-block;
+}
+
+/* "Luk" link skjult som standard */
+.less-link { display: none; }
+
+/* Når kortet er åbent: vis "Luk", skjul "Læs mere" */
+.offer-card.open .less-link { display: inline-block; }
+.offer-card.open .more-link { display: none; }
+
+/* Detaljesektion (skjult som standard) */
+.offer-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 320ms ease, opacity 240ms ease, padding 200ms ease, margin-top 200ms ease; /* Smooth animation */
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  pointer-events: none; /* Kan ikke klikkes når skjult */
+}
+
+/* Når kortet er åbent: vis detaljer */
+.offer-card.open .offer-details {
+  max-height: 560px;
+  opacity: 1;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-top: 8px;
+  text-align: left;
+  pointer-events: auto; /* Kan klikkes når synlig */
+}
+/* Desktop-version af kort */
+@media (min-width: 900px) {
+  .hero-content {
+    padding: 0 80px;
+    margin-bottom: -200px;
   }
-  
-/*-------------- CARDS -------------*/
-  
+
+  /* Grid layout med 2 kolonner */
   .offer-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding-bottom: 100px;
-  }
-  
-  .offer-card {
-    display: flex;
-    gap: 14px;
-    background-color: var(--green-mid);
-    border-radius: 18px;
-    padding: 14px 15px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    padding: 0 60px 100px 60px;
   }
 
-  .offer-main { display: flex; align-items: center; gap: 12px; width: 100%; flex-wrap: nowrap; }
-  
-  .offer-icon {
-    width: 60px;
-    height: 60px;
-    flex-shrink: 0;
-    border-radius: 999px;
-    background-color: var(--yellow-main);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    margin-top: 0; /* center vertically with the text */
-    margin-right: 12px; /* space between icon and text */
-  }
-  .offer-icon img { max-width: 40px; max-height: 40px; display: block; }
-
-  /* Make the text block take remaining space so icon stays beside it */
-  .offer-text {
-    flex: 1 1 auto;
-    text-align: left;
-  }
-  
-  .offer-text h4 {
-    letter-spacing: 0.08em;
-    margin: 0 0 4px;
-    text-align: left;
-  }
-  
-  .offer-text h6 {
-    margin: 0 0 6px;
-    opacity: 80%;
-    text-align: left;
-    letter-spacing: 0.08em;
-  }
-  
-
+  /* Skjul "Læs mere" link på desktop */
   .offer-link {
-    color: var(--yellow-light);
-    text-decoration: none;
-    margin: 0 8px 6px 0;
-    text-align: left;
-    display: inline-block;
+    display: none;
   }
-  .less-link { display: none; }
-  /* open state: swap link visibility & show details */
-  .offer-card.open .less-link { display: inline-block; }
-  .offer-card.open .more-link { display: none; }
-  /* animate open/close using max-height (keeps layout flowing) */
+
+  /* Vis altid detaljer på desktop (ingen åbn/luk) */
   .offer-details {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 320ms ease, opacity 240ms ease, padding 200ms ease, margin-top 200ms ease;
-    opacity: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-top: 0;
-    pointer-events: none;
-  }
-  
-  .offer-card.open .offer-details {
-    max-height: 560px;
+    max-height: none;
     opacity: 1;
     padding-top: 12px;
     padding-bottom: 12px;
     margin-top: 8px;
-    text-align: left;
     pointer-events: auto;
   }
 
-  @media (min-width: 900px) {
-    .hero-content {
-      padding: 0 80px;
-      margin-bottom: -200px;
-    }
-
-    .offer-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 60px;
-      padding: 0 60px 100px 60px;
-    }
-
-    .offer-link {
-      display: none;
-    }
-
-    .offer-details {
-      max-height: none;
-      opacity: 1;
-      padding-top: 12px;
-      padding-bottom: 12px;
-      margin-top: 8px;
-      pointer-events: auto;
-    }
-
-    .offer-card p {
-      font-size: 16px;
-    }
+  .offer-card p {
+    font-size: 16px;
   }
+}
 
-  
-  .offer-details-img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
+/* Billede i kortdetaljer */
+.offer-details-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
 
-  .offer-details-btn {
-    display: block;
-    margin: 0 auto;
-    width: fit-content;
-    min-width: 140px;
-    padding: 12px 18px;
-    border-radius: 10px;
-    border: 2px solid var(--yellow-main);
-    background: var(--yellow-main);
-    color: var(--text-dark);
-    font-weight: 700;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-  }
-  
+/* Knap i kortdetaljer */
+.offer-details-btn {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  min-width: 140px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: 2px solid var(--yellow-main);
+  background: var(--yellow-main);
+  color: var(--text-dark);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+/* ========================================
+   BØLGE-DEKORATIONER
+   ======================================== */
+
+/* Bølge 2 - Mellem sektioner */
 .wave2 { 
-    position: absolute;
-    bottom: -1px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    pointer-events: none;
-  }
-/* ---------- WAVE 2 (inside gallery) ---------- */
-  .gallery { position: relative; }
-  .gallery .wave2 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: translateY(-80%); /* move up by half its height */
-  }
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  pointer-events: none;
+}
 
-/* ---------- WAVE 3 (bottom of gallery) ---------- */
-  .gallery .wave3 {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    transform: translateY(80%);
-    pointer-events: none;
-  }
+/* Bølge i toppen af galleri */
+.gallery { position: relative; }
+.gallery .wave2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-80%);
+}
 
-/* ---------- GALLERI ---------- */
-  
-  .gallery {
+/* Bølge i bunden af galleri */
+.gallery .wave3 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(80%);
+  pointer-events: none;
+}
+/* ========================================
+   GALLERI SEKTION
+   ======================================== */
 
-    background-color: var(--yellow-main);
-    color: var(--text-dark);
-    padding: 26px 16px 32px;
-    padding-top: -200px;
-  }
-  
-  .gallery h2 {
+.gallery {
+  background-color: var(--yellow-main);
+  color: var(--text-dark);
+  padding: 26px 16px 32px;
+}
 
-    margin: 0 0 18px;
-    text-align: center;
-    padding-top: 15px;
-    z-index: 10;
-  }
-  
+/* Galleri overskrift */
+.gallery h2 {
+  margin: 0 0 18px;
+  text-align: center;
+  padding-top: 15px;
+  z-index: 10;
+}
+
+/* Liste af galleribilleder (mobil: vertikal) */
+.gallery-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+/* Tablet: 2 kolonner */
+@media (min-width: 510px) {
   .gallery-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* Desktop: 3 kolonner */
+@media (min-width: 900px) {
+  .gallery-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    align-content: center;
+    justify-content: center;
+    margin-right: 100px;
+    margin-left: 100px;
   }
 
-  @media (min-width: 510px) {
-    .gallery-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
+  .gallery {
+    padding-top: 10px;
+    margin-bottom: 50px;
   }
 
-  @media (min-width: 900px) {
-    .gallery-list {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 60px;
-      align-content: center;
-      justify-content: center;
-      margin-right: 100px;
-      margin-left: 100px;
-    }
-
-    .gallery {
-      padding-top: 10px;
-      margin-bottom: 50px;
-    }
-
-    .gallery-item {
-      width: 100%;
-    }
-  }
-  
   .gallery-item {
-    margin: 0;
-    overflow: hidden;
-    border-radius: 18px;
-    aspect-ratio: 1;
-    cursor: pointer;
+    width: 100%;
   }
+}
 
-  /* Hide first 3 images on mobile (show only last 3) */
+/* Enkelt galleribillede */
+.gallery-item {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  aspect-ratio: 1; /* Kvadratisk form */
+  cursor: pointer;
+}
+/* Mobil: Vis kun de sidste 3 billeder (skjul 1-3) */
+.gallery-item:nth-child(1),
+.gallery-item:nth-child(2),
+.gallery-item:nth-child(3) {
+  display: none;
+}
+
+/* Tablet: Vis de første 4 billeder (skjul 5-6) */
+@media (min-width: 510px) {
   .gallery-item:nth-child(1),
   .gallery-item:nth-child(2),
   .gallery-item:nth-child(3) {
-    display: none;
-  }
-
-  /* Show first 4 images on tablet (hide last 2) */
-  @media (min-width: 510px) {
-    .gallery-item:nth-child(1),
-    .gallery-item:nth-child(2),
-    .gallery-item:nth-child(3) {
-      display: block;
-    }
-    .gallery-item:nth-child(5),
-    .gallery-item:nth-child(6) {
-      display: none;
-    }
-  }
-
-  /* Show all 6 images on desktop */
-  @media (min-width: 900px) {
-    .gallery-item:nth-child(5),
-    .gallery-item:nth-child(6) {
-      display: block;
-    }
-  }
-  
-  .gallery-item img {
     display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
   }
-
-  .gallery-item:hover img {
-    transform: scale(1.05);
-  }
-
-  /* Lightbox Modal */
-  .lightbox {
+  .gallery-item:nth-child(5),
+  .gallery-item:nth-child(6) {
     display: none;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    align-items: center;
-    justify-content: center;
   }
+}
 
-  .lightbox.active {
-    display: flex;
+/* Desktop: Vis alle 6 billeder */
+@media (min-width: 900px) {
+  .gallery-item:nth-child(5),
+  .gallery-item:nth-child(6) {
+    display: block;
   }
+}
 
-  .lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-  }
+/* Billedstil i galleri */
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fyld kvadrat uden forvrængning */
+  transition: transform 0.3s ease; /* Smooth zoom-effekt */
+}
 
-  .lightbox-close {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    background: none;
-    border: none;
-    z-index: 10000;
-  }
+/* Zoom-effekt ved hover */
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+/* ========================================
+   LIGHTBOX - Fuldskærms billedvisning
+   ======================================== */
 
-  .lightbox-close:hover {
-    color: var(--yellow-light);
-  }
+/* Lightbox overlay (skjult som standard) */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999; /* Øverst på siden */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Mørk baggrund */
+  align-items: center;
+  justify-content: center;
+}
 
-  /* ---------- WAVE 3 ---------- */
+/* Vis lightbox når aktiv */
+.lightbox.active {
+  display: flex;
+}
+
+/* Billede i lightbox */
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain; /* Bevar billedets proportioner */
+}
+
+/* Luk-knap */
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 10000;
+}
+
+/* Luk-knap hover */
+.lightbox-close:hover {
+  color: var(--yellow-light);
+}

@@ -138,12 +138,11 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: clamp(12px, 2vw, 24px) clamp(12px, 5vw, 80px);
-    min-height: clamp(64px, 8vh, 90px);
+    height: clamp(64px, 8vh, 90px);
     position: sticky;
     top: 0;
     z-index: 1000;
     background-color: var(--green-dark);
-    transition: padding 200ms ease, min-height 200ms ease;
 }
 
 .logo-link { display: inline-block; }
@@ -345,9 +344,12 @@ body:not(.index-page) .wave-welcome {
     .mobile-menu {
       /* dropdown anchored to header (nav is placed inside .site-header) */
       position: absolute;
-      top: calc(100%);
+      top: 100%;
+      left: 0;
+      right: 0;
       width: 100%;
       max-width: 380px;
+      margin-left: auto;
       background: var(--yellow-main);
       border-bottom-left-radius: 12px;
       border-bottom-right-radius: 12px;
@@ -357,7 +359,6 @@ body:not(.index-page) .wave-welcome {
       opacity: 0;
       pointer-events: none;
       z-index: 1200;
-
     }
 
     /* Only apply transitions when menu has been interacted with */
