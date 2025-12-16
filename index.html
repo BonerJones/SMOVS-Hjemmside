@@ -6,6 +6,7 @@
   <title>SMOVS</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="landingpage.css" />
+  <link rel="stylesheet" href="menukort.css" />
   <script src="header.js"></script>
   <script src="gallery.js" defer></script>
 
@@ -83,7 +84,7 @@
                 <img src="images/gode billeder/vin2.jpg" alt="Drikkevarer" class="offer-details-img">
                 <p class="offer-details-text">Vi har fokus på kvalitet i glasset – fra naturvine og specialøl til klassiske cocktails med et twist.
                                               Oplev nye smage, nye favoritter og den hyggelige stemning, der gør hvert glas helt særligt hos SMOVS.</p>
-                <button class="btn offer-details-btn">Se udvalg</button>
+                <button class="btn offer-details-btn" onclick="openMenu(0)">Se udvalg</button>
               </div>
             </article>
 
@@ -101,7 +102,7 @@
                 <img src="images/ugens.jpg" alt="Mad & snacks" class="offer-details-img">
                 <p class="offer-details-text">Vi serverer simple, men velsmagende snacks og retter, der passer perfekt til en hyggelig aften.
                                               Håndplukkede råvarer, gode smage og overraskelser fra syd til nord – det er mad fra alle verdens hjørner.</p>
-                <button class="btn offer-details-btn">Se retter</button>
+                <button class="btn offer-details-btn" onclick="openMenu(5)">Se retter</button>
               </div>
             </article>
 
@@ -119,7 +120,7 @@
                 <img src="images/gal3.jpg" alt="Events" class="offer-details-img">
                 <p class="offer-details-text">Quizzer, livemusik, workshops og hyggelige temaaftener – der sker altid noget hos SMOVS.
                                               Uanset om du kommer alene eller med hele holdet, er der plads til grin, nye minder og kolde drikke.</p>
-                <button class="btn offer-details-btn">Se events</button>
+                <a href="events.html" class="btn offer-details-btn">Se events</a>
               </div>
             </article>
 
@@ -138,7 +139,7 @@
                 <p class="offer-details-text">Vores to lokaler kan danne rammen om alt fra barnedåb og fødselsdage til firmaarrangementer og private middage.
                                               Vi hjælper gerne med planlægning, så I kan slappe af og nyde aftenen.
                 </p>
-                <button class="btn offer-details-btn">Book lokaler</button>
+                <a href="lokaler.html" class="btn offer-details-btn">Book lokaler</a>
               </div>
             </article>
 
@@ -229,6 +230,118 @@
 
       <p class="footer-note">© 2025 SMOVS · Bar, hygge & events i hjertet af Aarhus</p>
     </footer>
+
+  <!-- ==================================== -->
+  <!-- MENU OVERLAY + MODAL -->
+  <!-- ==================================== -->
+
+  <!-- DARK BACKGROUND -->
+  <div id="overlay"></div>
+
+  <!-- MENU MODAL -->
+  <div id="menuModal">
+    <div class="menu-inner">
+
+      <!-- DRINK PAGE IMAGES -->
+      <div class="menu-page">
+        <button class="menu-close-x" onclick="closeMenu()">
+          <img src="images/icons/x.svg" alt="Luk" />
+        </button>
+        <img src="images/menu/drink1.jpg">
+      </div>
+      <div class="menu-page">
+        <button class="menu-close-x" onclick="closeMenu()">
+          <img src="images/icons/x.svg" alt="Luk" />
+        </button>
+        <img src="images/menu/drink2.jpg">
+      </div>
+      <div class="menu-page">
+        <button class="menu-close-x" onclick="closeMenu()">
+          <img src="images/icons/x.svg" alt="Luk" />
+        </button>
+        <img src="images/menu/drink3.jpg">
+      </div>
+      <div class="menu-page">
+        <button class="menu-close-x" onclick="closeMenu()">
+          <img src="images/icons/x.svg" alt="Luk" />
+        </button>
+        <img src="images/menu/drink4.jpg">
+      </div>
+      <div class="menu-page">
+        <button class="menu-close-x" onclick="closeMenu()">
+          <img src="images/icons/x.svg" alt="Luk" />
+        </button>
+        <img src="images/menu/drink5.jpg">
+      </div>
+
+      <!-- FOOD PAGE -->
+      <div class="menu-page">
+        <button class="menu-close-x" onclick="closeMenu()">
+          <img src="images/icons/x.svg" alt="Luk" />
+        </button>
+        <img src="images/menu/mad.jpg">
+      </div>
+    </div>
+
+    <!-- NAVIGATION BUTTONS -->
+    <div class="menu-nav">
+      <button id="prevBtn" class="menu-nav-btn">← Forrige</button>
+      <button id="nextBtn" class="menu-nav-btn">Næste →</button>
+    </div>
+
+    <!-- CLOSE BUTTON -->
+    <button id="closeMenu" class="close-menu-btn">
+      <img src="images/icons/x.svg" alt="Luk" />
+    </button>
+  </div>
+
+  <!-- MENU SCRIPT -->
+  <script>
+    let currentPage = 0;
+    const pages = document.querySelectorAll(".menu-page");
+    const overlay = document.getElementById("overlay");
+    const modal = document.getElementById("menuModal");
+
+    function openMenu(pageIndex) {
+      currentPage = pageIndex;
+      overlay.classList.add("show");
+      modal.classList.add("show");
+      showPage(currentPage);
+    }
+
+    function closeMenu() {
+      overlay.classList.remove("show");
+      modal.classList.remove("show");
+    }
+
+    function showPage(index) {
+      pages.forEach((p, i) => {
+        p.style.display = i === index ? "block" : "none";
+      });
+      
+      // Hide navigation buttons on the food page (last page)
+      const navButtons = document.querySelector(".menu-nav");
+      if (index === pages.length - 1) {
+        navButtons.style.display = "none";
+      } else {
+        navButtons.style.display = "flex";
+      }
+    }
+
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      currentPage = (currentPage + 1) % pages.length;
+      showPage(currentPage);
+    });
+
+    document.getElementById("prevBtn").addEventListener("click", () => {
+      currentPage = (currentPage - 1 + pages.length) % pages.length;
+      showPage(currentPage);
+    });
+
+    document.getElementById("closeMenu").addEventListener("click", closeMenu);
+    overlay.addEventListener("click", closeMenu);
+  </script>
+
   <script src="card.js"></script>
 </body>
 </html>

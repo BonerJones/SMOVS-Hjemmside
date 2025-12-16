@@ -105,15 +105,17 @@
 }
 
 
+  /* Hover effects only on desktop */
+  @media (min-width: 900px) {
+    .btn:hover::after {
+        width: 100%; /* Expands the underline on hover */
+    }
 
-  .btn:hover::after {
-      width: 100%; /* Expands the underline on hover */
-  }
-
-  .btn:hover {
-      background-color: transparent;
-      color: var(--yellow-light);
-      border: solid 2px var(--yellow-light);
+    .btn:hover {
+        background-color: transparent;
+        color: var(--yellow-light);
+        border: solid 2px var(--yellow-light);
+    }
   }
 
   
@@ -235,6 +237,7 @@
     padding-bottom: 12px;
     margin-top: 8px;
     text-align: left;
+    pointer-events: auto;
   }
 
   @media (min-width: 900px) {
@@ -280,7 +283,7 @@
   .offer-details-btn {
     display: block;
     margin: 0 auto;
-    width: auto;
+    width: fit-content;
     min-width: 140px;
     padding: 12px 18px;
     border-radius: 10px;
@@ -289,6 +292,8 @@
     color: var(--text-dark);
     font-weight: 700;
     cursor: pointer;
+    text-decoration: none;
+    text-align: center;
   }
   
 .wave2 { 
@@ -354,10 +359,11 @@
     .gallery-list {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
+      gap: 60px;
       align-content: center;
       justify-content: center;
-      margin-left: 82px;
+      margin-right: 100px;
+      margin-left: 100px;
     }
 
     .gallery {
@@ -366,7 +372,7 @@
     }
 
     .gallery-item {
-      width: 80%;
+      width: 100%;
     }
   }
   

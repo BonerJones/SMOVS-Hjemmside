@@ -66,13 +66,14 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.outline-btn:hover {
-  background-color: transparent;
-  color: var(--yellow-light);
-  border: 2px solid var(--yellow-light);
+/* Hover effects only on desktop */
+@media (min-width: 900px) {
+  .outline-btn:hover {
+    background-color: transparent;
+    color: var(--yellow-light);
+    border: 2px solid var(--yellow-light);
+  }
 }
-
-
 /* -------------------------- */
 /*       UGEBASERET RET       */
 /* -------------------------- */
@@ -91,7 +92,7 @@
     width: 100%;
     pointer-events: none;
   }
-  
+
 .weekly .wave2 {
     position: absolute;
     left: 0;
@@ -311,10 +312,12 @@
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
   }
 
-  .menu-nav-btn:hover {
-    background-color: transparent;
-    color: var(--yellow-light);
-    border: 2px solid var(--yellow-light);
+  @media (min-width: 900px) {
+    .menu-nav-btn:hover {
+      background-color: transparent;
+      color: var(--yellow-light);
+      border: 2px solid var(--yellow-light);
+    }
   }
   
   /* ========================================================= */

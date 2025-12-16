@@ -234,6 +234,14 @@
       pages.forEach((p, i) => {
         p.style.display = i === index ? "block" : "none";
       });
+      
+      // Hide navigation buttons on the food page (last page)
+      const navButtons = document.querySelector(".menu-nav");
+      if (index === pages.length - 1) {
+        navButtons.style.display = "none";
+      } else {
+        navButtons.style.display = "flex";
+      }
     }
 
     document.getElementById("nextBtn").addEventListener("click", () => {
