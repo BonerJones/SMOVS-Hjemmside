@@ -1,212 +1,175 @@
-  /* KONTAKT HERO - Custom Styles */
-  .hero h1 {
-    margin-bottom: 8px;
-    color: var(--yellow-main);
-  }
-  
-  .hero p {
-    margin-bottom: 16px;
-    color: white;
-  }
-  
-  /* BUTTONS */
-  .btn {
-    display: inline-block;
-    background: var(--yellow-main);
-    color: #000;
-    padding: 10px 24px;
-    border-radius: 999px;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  
-  .btn.small {
-    padding: 8px 16px;
-    font-size: 14px;
-  }
+/* ---------- HERO ---------- */
 
-  
-  /* CONTACT OPTIONS */
-  .contact-options {
-    position: relative;
-    background: var(--yellow-main);
-    color: #000;
-    padding: 32px 32px;
-    text-align: center;
-    margin-top: -70px;
-    padding-bottom: 50px;
-  }
-
-  .contact-options .wave-welcome {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    pointer-events: none;
-    transform: translateY(-47%);
-  }
-  
-  .contact-options h2 {
-    margin-bottom: 24px;
-    
-  }
-  .card h3{
-    color: var(--yellow-main);
-  }
-  .card {
-    background: var(--green-mid);
-    padding: 20px;
-    border-radius: 20px;
-    margin-bottom: 16px;
-  }
-  .card p{
-    color: white;
-  }
-
-  .icon-circle {
-    width: 80px;
-    height: 80px;
-    background-color: var(--yellow-main); /* yellow */
-    border-radius: 50%;
-    margin: 0 auto 16px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .icon-circle img {
-    width: 28px;
-    height: 28px;
-    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%); /* Adjust color to match design */
-  }
-  
-  /* FORM */
-  .form-section {
-    padding: 32px 16px;
-  }
-  
-  .form-section h2 {
-    text-align: center;
-    margin-bottom: 16px;
-    color: var(--yellow-main);
-  }
-  
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    padding: 12px;
-    border-radius: 12px;
-    border: none;
-  }
-  
-  .contact-form textarea {
-    min-height: 100px;
-  }
-
-  .wave5{
-    margin-top: -70px;
-  }
-/* ============================= */
-/* DESKTOP LAYOUT */
-/* ============================= */
-
-@media (min-width: 1024px) {
-
-  .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "title title"
-      "content image";
-    gap: 30px;
-    padding: 80px 40px;
-  }
-
-  .hero h1 {
-    grid-area: title;
-    font-size: 120px;
-    text-align: center;
-    margin-top: -100px;
-  }
-
-  .hero p {
-    margin-bottom: 24px;
-    font-size: 32px;
-    margin-left: auto;
-  }
-
-  .hero .btn {
-    width: fit-content;
-    height: fit-content;
-    margin-top: -200px;
-    margin-left: 275px;
-    font-size: 28px;
-  }
-
-  .hero-image {
-    grid-area: image;
-    max-width: 520px;
-    justify-self: end;
-    height: auto;
-  }
-  .wave2{
-    min-width: 100%;
-    margin-top: -100px;
-  }
-  .contact-options {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    padding: 80px;
-    align-items: center;
-    margin-top: -250px;
-    padding-bottom: 250px;
-  }
-
-  /* Force title to stay on top */
-  .contact-options h2 {
-    grid-column: 1 / -1;
-    margin-bottom: 40px;
-    text-align: center;
-    font-size: 100px;
-  }
-
-  .card {
-    margin: 0;
-    
-  }
-  .wave5{
-    min-width:100%;
-    margin-top: -250px;
-  }
-  .form-section {
-    padding: 100px 20px;
-    text-align: center;
-  }
-
-  .form-section h2 {
-    margin-bottom: 48px;
-    font-size: 68px;
-    margin-top: -100px;
-  }
-
-  .contact-form {
-    max-width: 900px;
-    margin: 0 auto;          /* centers the form */
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .contact-form button {
-    max-width: 400px;
-    width: 100%;
-    margin: 24px auto 0;     /* center button */
-  }
+.kontakt-hero {
+  padding: 24px 18px 32px;
+  background-color: var(--green-dark);
+  color: var(--white);
+  text-align: center;
 }
 
+.kontakt-title {
+  letter-spacing: 0.12em;
+  margin: 0 0 8px;
+  color: var(--yellow-main);
+}
+
+.kontakt-intro {
+  line-height: 1.6;
+  text-align: center;
+}
+
+.kontakt-hero-image {
+  width: 100%;
+  max-width: 230px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 auto 18px;
+}
+
+.kontakt-hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.kontakt-hero-btn {
+  display: inline-block;
+  margin-top: 4px;
+}
+
+/* ---------- GENERELLE KNAPPER ---------- */
+
+.btn-primary,
+.btn-secondary {
+  border: none;
+  border-radius: 999px;
+  font-family: var(--font-secondary-bold);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  padding: 10px 22px;
+}
+
+.btn-primary {
+  background-color: var(--yellow-main);
+  color: var(--text-dark);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+}
+
+.btn-secondary {
+  background-color: var(--yellow-main);
+  color: var(--text-dark);
+}
+
+/* ---------- KONTAKT MULIGHEDER ---------- */
+
+.kontakt-options {
+  background-color: var(--yellow-main);
+  padding: 26px 18px 34px;
+  color: var(--text-dark);
+}
+
+.section-heading {
+  font-family: var(--font-primary);
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 0 0 20px;
+}
+
+.kontakt-card {
+  background-color: var(--green-dark);
+  color: var(--white);
+  border-radius: 16px;
+  padding: 18px 16px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.kontakt-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--yellow-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.kontakt-card-icon img {
+  width: 26px;
+  height: 26px;
+}
+
+.kontakt-card-content h3 {
+  font-family: var(--font-secondary-bold);
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+
+.kontakt-card-content p {
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+/* ---------- FORMULAR ---------- */
+
+.kontakt-form-section {
+  background-color: var(--green-dark);
+  color: var(--white);
+  padding: 26px 18px 40px;
+}
+
+.kontakt-form-section .section-heading {
+  color: var(--yellow-main);
+  margin-bottom: 18px;
+}
+
+.kontakt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: var(--font-secondary);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.form-field span {
+  color: var(--white);
+}
+
+.form-field input,
+.form-field textarea {
+  border-radius: 999px;
+  border: none;
+  padding: 8px 14px;
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  outline: none;
+}
+
+.form-field textarea {
+  border-radius: 12px;
+  resize: vertical;
+  min-height: 90px;
+}
+
+.form-submit {
+  width: 100%;
+  margin-top: 8px;
+}

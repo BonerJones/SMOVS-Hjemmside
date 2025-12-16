@@ -3,20 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SMOVS – Kontakt</title>
+  <title>SMOVS – Menukort</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="kontakt.css" />
-  <script src="header.js"></script>
 
-  <!-- Primær font til overskrifter -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@500;700&display=swap" rel="stylesheet">
-  <!-- Sekundær font til brødtekst -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Header JS -->
+  <script src="header.js" defer></script>
 </head>
+
 <body>
   <div class="page">
 
+    <!-- ==================================== -->
     <!-- HEADER -->
+    <!-- ==================================== -->
     <header class="site-header">
       <div class="logo">
         <a href="/" class="logo-link">
@@ -39,81 +45,96 @@
         </ul>
       </nav>
     </header>
-<main>
-  
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-image">
-        <img src="images/kontakt.jpg" alt="Kontakt billede">
-      </div>
-      <div class="hero-content">
-        <h1>KONTAKT</h1>
-        <p>Har du spørgsmål eller brug for hjælp?<br> Vi er her for dig.</p>
-        <a href="#kontakt" class="btn">Skriv til os</a>
-      </div>
-      <img src="images/halfwave.svg" alt="Bølge" class="wave-hero" />
-    </section>
-  
-    <!-- KONTAKT MULIGHEDER -->
-    <section class="contact-options" id="kontakt">
-      <img src="images/halfwave2.svg" alt="Bølge" class="wave-welcome" />
-      <h2>KONTAKT MULIGHEDER</h2>
-  
-      <div class="card">
-        <div class="icon-circle">
-          <img src="images/icons/tele.svg" alt="telefon ikon">
+    
+    <main class="page kontakt-page">
+
+      <!-- HERO / INTRO -->
+      <section class="kontakt-hero">
+        <h1 class="kontakt-title">Kontakt</h1>
+        <p class="kontakt-intro">Har du spørgsmål eller brug for hjælp? Vi er klar til at høre fra dig.</p>
+    
+        <div class="kontakt-hero-image">
+          <img src="images/kontakt.jpg" alt="Gæster der hygger sig hos SMOVS">
         </div>
-
-        <h3>TELEFON</h3>
-        <p>Ring og få svar med det samme</p>
-        <a href="tel:+4528408470" class="btn small">Ring op</a>
-      </div>
-  
-      <div class="card">
-        <div class="icon-circle">
-          <img src="images/icons/mail.svg" alt="email ikon">
-        </div>
-
-        <h3>EMAIL</h3>
-        <p>Vi svarer hurtigt på henvendelser</p>
-        <a href="mailto:kontakt@smovs.dk" class="btn small">Send mail</a>
-      </div>
-  
-      <div class="card">
-        <div class="icon-circle">
-          <img src="images/icons/find.svg" alt="Lokation ikon">
-        </div>
-
-        <h3>BESØG OS</h3>
-        <p>Helle Virkners Pl. 5, 8000 Aarhus C</p>
-        <a href="#" class="btn small">Find os</a>
-      </div>
-    </section>
-  
-    <!-- WAVE -->
-    <img src="images/halfwave.svg" alt="Bølge" class="wave2" />
-  
-    <!-- FORM -->
-    <section class="form-section">
-      <h2>SEND EN BESKED</h2>
-  
-      <form class="contact-form">
-        <input type="text" placeholder="Navn">
-        <input type="email" placeholder="Email">
-        <input type="text" placeholder="Emne">
-        <textarea placeholder="Besked"></textarea>
-        <button type="submit" class="btn">Send besked</button>
-      </form>
-    </section>
-
- <!-- WAVE -->
- <img src="images/halfwave2.svg" alt="Bølge" class="wave3" />
-
+    
+        <button class="btn-primary kontakt-hero-btn">Skriv til os</button>
+      </section>
+    
+      <!-- KONTAKT MULIGHEDER -->
+      <section class="kontakt-options">
+        <h2 class="section-heading">Kontakt<br>muligheder</h2>
+    
+        <!-- Telefon -->
+        <article class="kontakt-card">
+          <div class="kontakt-card-icon">
+            <img src="images/icons/tele.svg" alt="Telefon ikon">
+          </div>
+          <div class="kontakt-card-content">
+            <h3>Telefon</h3>
+            <p>Ring og få en snak med vores personale.</p>
+            <button class="btn-secondary">Ring op</button>
+          </div>
+        </article>
+    
+        <!-- Email -->
+        <article class="kontakt-card">
+          <div class="kontakt-card-icon">
+            <img src="images/icons/mail.svg" alt="Mail ikon">
+          </div>
+          <div class="kontakt-card-content">
+            <h3>Email</h3>
+            <p>Vi svarer hurtigst muligt på henvendelser.</p>
+            <button class="btn-secondary">Send mail</button>
+          </div>
+        </article>
+    
+        <!-- Besøg os -->
+        <article class="kontakt-card">
+          <div class="kontakt-card-icon">
+            <img src="images/icons/find.svg" alt="Lokation ikon">
+          </div>
+          <div class="kontakt-card-content">
+            <h3>Besøg os</h3>
+            <p>Helle Virkners Plads 5, 8000 Aarhus C.</p>
+            <button class="btn-secondary">Find vej</button>
+          </div>
+        </article>
+      </section>
+    
+      <!-- SEND EN BESKED -->
+      <section class="kontakt-form-section">
+        <h2 class="section-heading">Send en besked</h2>
+    
+        <form class="kontakt-form">
+          <label class="form-field">
+            <span>Navn</span>
+            <input type="text" name="navn" placeholder="Navn">
+          </label>
+    
+          <label class="form-field">
+            <span>Email</span>
+            <input type="email" name="email" placeholder="Email">
+          </label>
+    
+          <label class="form-field">
+            <span>Emne</span>
+            <input type="text" name="emne" placeholder="Emne">
+          </label>
+    
+          <label class="form-field">
+            <span>Besked</span>
+            <textarea name="besked" rows="4" placeholder="Skriv din besked her"></textarea>
+          </label>
+    
+          <button type="submit" class="btn-primary form-submit">
+            Send besked
+          </button>
+        </form>
+      </section>
+    
     </main>
 
-
-
-       <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="footer-logo"><img src="images/logo.svg"></div>
 
@@ -152,5 +173,3 @@
 
       <p class="footer-note">© 2025 SMOVS · Bar, hygge & events i hjertet af Aarhus</p>
     </footer>
-</body>
-</html>
