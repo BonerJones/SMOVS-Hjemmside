@@ -217,6 +217,7 @@
   height: 50px;
   margin-top: 8px;
   align-self: center;
+  font-weight: 700;
 }
 
 @media (min-width: 900px) {
@@ -227,5 +228,6 @@
     width: 300px;
     height: 60px;
     font-size: 18px;
+    font-weight: 700;
   }
 }
