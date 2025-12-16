@@ -65,7 +65,7 @@
   color: var(--text-dark);
 }
 
-.section-heading {
+.section-heading1 {
   text-align: center;
   margin: 0 0 80px;
 }
@@ -74,15 +74,15 @@
   background-color: var(--green-dark);
   color: var(--white);
   border-radius: 16px;
-  padding: 18px 16px 6px;
+  padding: 18px 16px 16px;
   display: flex; /* Enable flexbox for alignment */
   flex-direction: column; /* Stack content vertically */
   align-items: center; /* Center content horizontally */
   justify-content: center; /* Center content vertically */
   text-align: center; /* Center-align text */
   gap: 6px; /* Add spacing between elements */
-  margin: 0 auto 16px; /* Center the card and add spacing below */
-  max-width: 250px; /* Limit the width of the card */
+  margin: 40px auto 16px; /* Center the card and add spacing below */
+  max-width: 230px; /* Limit the width of the card */
 }
 
 .kontakt-card-icon {
@@ -118,11 +118,18 @@
   background-color: var(--green-dark);
   color: var(--white);
   padding: 26px 18px 40px;
+  max-width: 200px;
 }
 
 .kontakt-form-section .section-heading {
   color: var(--yellow-main);
   margin-bottom: 18px;
+}
+
+.section-heading2 {
+  text-align: center;
+  margin: 60px 0 40px;
+  color: var(--yellow-light);
 }
 
 .kontakt-form {
@@ -134,30 +141,30 @@
 .form-field {
   display: flex;
   flex-direction: column;
+  align-content: center;
+  padding: 2px 150px 2px 140px;
   gap: 4px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.form-field span {
-  color: var(--white);
+  color: var(--text-dark);
+  font-family: var(--font-secondary);
 }
 
 .form-field input,
 .form-field textarea {
   border-radius: 999px;
   border: none;
-  padding: 8px 14px;
+  padding: 18px 14px;
   outline: none;
 }
 
 .form-field textarea {
-  border-radius: 12px;
+  border-radius: 22px;
   resize: vertical;
   min-height: 90px;
 }
 
 .form-submit {
-  width: 100%;
+  width: 250px;
+  height: 50px;
   margin-top: 8px;
+  align-self: center;
 }

@@ -37,7 +37,9 @@
 	--font-secondary: "Zain";
 	--font-secondary-bold: "Zain Bold";
   }
-  
+  html {
+    scroll-behavior: smooth;
+  }
   *,
   *::before,
   *::after {
