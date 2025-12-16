@@ -72,6 +72,13 @@
 .btn-secondary {
   background-color: var(--yellow-main);
   color: var(--text-dark);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 /* ---------- KONTAKT MULIGHEDER ---------- */
