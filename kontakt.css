@@ -185,7 +185,7 @@
   display: flex;
   flex-direction: column;
   align-content: center;
-  padding: 2px 150px 2px 140px;
+  padding: 2px 75px;
   gap: 4px;
   color: var(--text-dark);
   font-family: var(--font-secondary);
