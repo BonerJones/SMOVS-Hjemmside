@@ -1,3 +1,7 @@
+// ================================================
+// TILBUDSKORT - Expand/collapse funktionalitet
+// ================================================
+
 // Vent til siden er fuldt indlæst
 document.addEventListener('DOMContentLoaded', () => {
 	// Find alle tilbudskort på siden
@@ -37,4 +41,70 @@ document.addEventListener('DOMContentLoaded', () => {
 			less.setAttribute('aria-expanded', 'false');
 		});
 	});
+
+	// ================================================
+	// MENU MODAL - Håndtering af menu visning
+	// ================================================
+
+	let currentPage = 0;
+	const pages = document.querySelectorAll(".menu-page");
+	const overlay = document.getElementById("overlay");
+	const modal = document.getElementById("menuModal");
+
+	// Funktion til at åbne menu modal
+	function openMenu(pageIndex) {
+		currentPage = pageIndex;
+		overlay.classList.add("show");
+		modal.classList.add("show");
+		showPage(currentPage);
+	}
+
+	// Funktion til at lukke menu modal
+	function closeMenu() {
+		overlay.classList.remove("show");
+		modal.classList.remove("show");
+	}
+
+	// Funktion til at vise den valgte side
+	function showPage(index) {
+		pages.forEach((p, i) => {
+			p.style.display = i === index ? "block" : "none";
+		});
+		
+		// Skjul navigationsknapper på mad-siden (sidste side)
+		const navButtons = document.querySelector(".menu-nav");
+		if (index === pages.length - 1) {
+			navButtons.style.display = "none";
+		} else {
+			navButtons.style.display = "flex";
+		}
+	}
+
+	// Event listeners for åbne-knapper
+	document.querySelectorAll('[data-open-menu]').forEach(btn => {
+		btn.addEventListener('click', function(e) {
+			e.preventDefault();
+			const pageIndex = parseInt(this.getAttribute('data-open-menu'));
+			openMenu(pageIndex);
+		});
+	});
+
+	// Event listener for næste-knap
+	document.getElementById("nextBtn").addEventListener("click", () => {
+		currentPage = (currentPage + 1) % pages.length;
+		showPage(currentPage);
+	});
+
+	// Event listener for forrige-knap
+	document.getElementById("prevBtn").addEventListener("click", () => {
+		currentPage = (currentPage - 1 + pages.length) % pages.length;
+		showPage(currentPage);
+	});
+
+	// Event listeners for luk-knapper
+	document.getElementById("closeMenu").addEventListener("click", closeMenu);
+	document.querySelectorAll('.menu-close-x').forEach(btn => {
+		btn.addEventListener('click', closeMenu);
+	});
+	overlay.addEventListener("click", closeMenu);
 });

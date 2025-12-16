@@ -66,12 +66,24 @@
   .hero-image img {
     content: url('images/event.jpg');
   }
+  
+  /* Begræns billeder i tilbudskort til 80% */
+  .offer-details-img {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* Desktop-størrelse */
 @media (min-width: 900px) {
   .hero-tagline {
     font-size: clamp(48px, 5vw, 72px);
+  }
+  
+  /* Gendan fuld bredde på desktop */
+  .offer-details-img {
+    max-width: 100%;
   }
 }
 

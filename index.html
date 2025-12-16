@@ -49,7 +49,7 @@
       <section class="hero">
         <div class="hero-image">
           <picture>
-            <source media="(min-width: 900px)" srcset="images/compressed/event.jpg" type="image/jpeg">
+            <source media="(min-width: 510px)" srcset="images/compressed/event.jpg" type="image/jpeg">
             <img src="images/compressed/hero.jpg" alt="Galleri fra SMOVS" />
           </picture>
         </div>
@@ -86,7 +86,7 @@
                 <img src="images/compressed/vin2.jpg" alt="Drikkevarer" class="offer-details-img">
                 <p class="offer-details-text">Vi har fokus på kvalitet i glasset – fra naturvine og specialøl til klassiske cocktails med et twist.
                                               Oplev nye smage, nye favoritter og den hyggelige stemning, der gør hvert glas helt særligt hos SMOVS.</p>
-                <button class="btn offer-details-btn" onclick="openMenu(0)">Se udvalg</button>
+                <button class="btn offer-details-btn" data-open-menu="0">Se udvalg</button>
               </div>
             </article>
 
@@ -104,7 +104,7 @@
                 <img src="images/compressed/ugens.jpg" alt="Mad & snacks" class="offer-details-img">
                 <p class="offer-details-text">Vi serverer simple, men velsmagende snacks og retter, der passer perfekt til en hyggelig aften.
                                               Håndplukkede råvarer, gode smage og overraskelser fra syd til nord – det er mad fra alle verdens hjørner.</p>
-                <button class="btn offer-details-btn" onclick="openMenu(5)">Se retter</button>
+                <button class="btn offer-details-btn" data-open-menu="5">Se retter</button>
               </div>
             </article>
 
@@ -246,31 +246,31 @@
 
       <!-- DRINK PAGE IMAGES -->
       <div class="menu-page">
-        <button class="menu-close-x" onclick="closeMenu()">
+        <button class="menu-close-x">
           <img src="images/icons/x.svg" alt="Luk" />
         </button>
         <img src="images/menu/drink1.jpg">
       </div>
       <div class="menu-page">
-        <button class="menu-close-x" onclick="closeMenu()">
+        <button class="menu-close-x">
           <img src="images/icons/x.svg" alt="Luk" />
         </button>
         <img src="images/menu/drink2.jpg">
       </div>
       <div class="menu-page">
-        <button class="menu-close-x" onclick="closeMenu()">
+        <button class="menu-close-x">
           <img src="images/icons/x.svg" alt="Luk" />
         </button>
         <img src="images/menu/drink3.jpg">
       </div>
       <div class="menu-page">
-        <button class="menu-close-x" onclick="closeMenu()">
+        <button class="menu-close-x">
           <img src="images/icons/x.svg" alt="Luk" />
         </button>
         <img src="images/menu/drink4.jpg">
       </div>
       <div class="menu-page">
-        <button class="menu-close-x" onclick="closeMenu()">
+        <button class="menu-close-x">
           <img src="images/icons/x.svg" alt="Luk" />
         </button>
         <img src="images/menu/drink5.jpg">
@@ -278,10 +278,10 @@
 
       <!-- FOOD PAGE -->
       <div class="menu-page">
-        <button class="menu-close-x" onclick="closeMenu()">
+        <button class="menu-close-x">
           <img src="images/icons/x.svg" alt="Luk" />
         </button>
-        <img src="images/compressed/mad.jpg">
+        <img src="images/menu/mad.jpg">
       </div>
     </div>
 
@@ -296,53 +296,6 @@
       <img src="images/icons/x.svg" alt="Luk" />
     </button>
   </div>
-
-  <!-- MENU SCRIPT -->
-  <script>
-    let currentPage = 0;
-    const pages = document.querySelectorAll(".menu-page");
-    const overlay = document.getElementById("overlay");
-    const modal = document.getElementById("menuModal");
-
-    function openMenu(pageIndex) {
-      currentPage = pageIndex;
-      overlay.classList.add("show");
-      modal.classList.add("show");
-      showPage(currentPage);
-    }
-
-    function closeMenu() {
-      overlay.classList.remove("show");
-      modal.classList.remove("show");
-    }
-
-    function showPage(index) {
-      pages.forEach((p, i) => {
-        p.style.display = i === index ? "block" : "none";
-      });
-      
-      // Hide navigation buttons on the food page (last page)
-      const navButtons = document.querySelector(".menu-nav");
-      if (index === pages.length - 1) {
-        navButtons.style.display = "none";
-      } else {
-        navButtons.style.display = "flex";
-      }
-    }
-
-    document.getElementById("nextBtn").addEventListener("click", () => {
-      currentPage = (currentPage + 1) % pages.length;
-      showPage(currentPage);
-    });
-
-    document.getElementById("prevBtn").addEventListener("click", () => {
-      currentPage = (currentPage - 1 + pages.length) % pages.length;
-      showPage(currentPage);
-    });
-
-    document.getElementById("closeMenu").addEventListener("click", closeMenu);
-    overlay.addEventListener("click", closeMenu);
-  </script>
 
   <script src="card.js"></script>
 </body>
