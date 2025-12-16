@@ -134,15 +134,7 @@
       margin-top: 20px; /* Add spacing above the button */
     }
   }
-  @media (min-width: 510px) {
-    .yellow-box {
-      width: 100%; /* Full width */
-      background-color: var(--yellow-main); /* Use the yellow-main color */
-      padding: 40px; /* Add some padding inside the box */
-      margin-top: -120px;
-      margin-bottom: 60px;
-    }
-  }
+
   
   /* Genbrugelig "Book lokale"-knap */
   .lokale-btn {
