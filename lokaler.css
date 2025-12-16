@@ -134,12 +134,17 @@
     letter-spacing: 0.08em;
     text-decoration: none;
     text-align: center;
-    border: none;
+    border: 2px solid var(--yellow-main);
     cursor: pointer;
   }
   
-  .lokale-btn:hover {
-    filter: brightness(1.05);
+  /* Hover effects only for devices with hover capability (not mobile) */
+  @media (hover: hover) {
+    .lokale-btn:hover {
+      background-color: transparent;
+      color: var(--yellow-light);
+      border: 2px solid var(--yellow-light);
+    }
   }
   
   /* ---------- CTA-SEKTION ---------- */

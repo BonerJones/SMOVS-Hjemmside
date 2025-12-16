@@ -462,6 +462,12 @@ body:not(.index-page) .wave-welcome {
         color: var(--yellow-main);
       }
 
+      .mobile-menu a.active {
+        border-bottom: 2px solid var(--yellow-main);
+        border-radius: 0;
+        padding-bottom: 0px;
+      }
+
       /* Hero adjustments for desktop */
       .hero { 
         min-height: clamp(420px, 56vh, 880px); 

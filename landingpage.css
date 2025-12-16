@@ -84,14 +84,14 @@
     cursor: pointer;
     margin-left: 0;
     margin-top: 25px;
-    border: solid 2px var(--yellow-light);
+    border: solid 2px var(--yellow-main);
     position: relative; /* Required for the ::after pseudo-element */
     overflow: hidden; /* Ensures the after effect stays within the button */
   }
   
   .btn-cta {
-    background-color: transparent;
-    color: var(--yellow-light);
+    background-color: var(--yellow-main);
+    color: var(--text-dark);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
     margin-top: 75px;
   }
@@ -104,15 +104,18 @@
     height: 2px;    
 }
 
-.btn:hover::after {
-    width: 100%; /* Expands the underline on hover */
-}
 
-.btn:hover {
-    background-color: var(--yellow-light); /* Optional: Change background on hover */
-    color: var(--text-dark);
-    border: solid 2px var(--yellow-light);
-}
+
+  .btn:hover::after {
+      width: 100%; /* Expands the underline on hover */
+  }
+
+  .btn:hover {
+      background-color: transparent;
+      color: var(--yellow-light);
+      border: solid 2px var(--yellow-light);
+  }
+
   
 /* ---------- WELCOME / VI TILBYDER ---------- */
   
@@ -276,14 +279,14 @@
     min-width: 140px;
     padding: 12px 18px;
     border-radius: 10px;
-    border: none;
+    border: 2px solid var(--yellow-main);
     background: var(--yellow-main);
     color: var(--text-dark);
     font-weight: 700;
     cursor: pointer;
   }
   
-.wave2 {
+.wave2 { 
     position: absolute;
     bottom: -1px;
     left: 50%;
