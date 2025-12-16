@@ -8,34 +8,31 @@
 }
 
 .kontakt-title {
-  letter-spacing: 0.12em;
-  margin: 0 0 8px;
-  color: var(--yellow-main);
+  margin: 0 0 15px;
+  color: var(--yellow-light);
 }
 
 .kontakt-intro {
+  margin: 0 0 20px;
   line-height: 1.6;
   text-align: center;
 }
 
-.kontakt-hero-image {
-  width: 100%;
-  max-width: 230px;
-  border-radius: 12px;
-  overflow: hidden;
-  margin: 0 auto 18px;
-}
-
-.kontakt-hero-image img {
+.kontakt-hero-img {
+  margin: 50px 0 35px;
   width: 100%;
   height: auto;
-  display: block;
-  object-fit: cover;
+  max-width: 350px;
+  border-radius: 12px;
 }
 
 .kontakt-hero-btn {
-  display: inline-block;
+  display: block;
   margin-top: 4px;
+  margin: 50px auto 170px;
+  max-width: 200px;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 /* ---------- GENERELLE KNAPPER ---------- */
@@ -44,8 +41,6 @@
 .btn-secondary {
   border: none;
   border-radius: 999px;
-  font-family: var(--font-secondary-bold);
-  font-size: 14px;
   letter-spacing: 0.08em;
   cursor: pointer;
   padding: 10px 22px;
@@ -66,38 +61,38 @@
 
 .kontakt-options {
   background-color: var(--yellow-main);
-  padding: 26px 18px 34px;
+  padding: 35px 18px 34px;
   color: var(--text-dark);
 }
 
 .section-heading {
-  font-family: var(--font-primary);
-  font-size: 22px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin: 0 0 20px;
+  text-align: center;
+  margin: 0 0 80px;
 }
 
 .kontakt-card {
   background-color: var(--green-dark);
   color: var(--white);
   border-radius: 16px;
-  padding: 18px 16px 16px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 16px;
+  padding: 18px 16px 6px;
+  display: flex; /* Enable flexbox for alignment */
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  text-align: center; /* Center-align text */
+  gap: 6px; /* Add spacing between elements */
+  margin: 0 auto 16px; /* Center the card and add spacing below */
+  max-width: 250px; /* Limit the width of the card */
 }
 
 .kontakt-card-icon {
-  width: 56px;
-  height: 56px;
+  width: 86px;
+  height: 86px;
   border-radius: 50%;
   background-color: var(--yellow-main);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  display: flex; /* Enable flexbox for alignment */
+  align-items: center; /* Center icon vertically */
+  justify-content: center; /* Center icon horizontally */
 }
 
 .kontakt-card-icon img {
@@ -106,18 +101,15 @@
 }
 
 .kontakt-card-content h3 {
-  font-family: var(--font-secondary-bold);
-  font-size: 14px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  margin: 0 0 6px;
+  color: var(--yellow-light);
+  margin: 10px 0 6px;
 }
 
 .kontakt-card-content p {
-  font-family: var(--font-secondary);
-  font-size: 13px;
   line-height: 1.5;
-  margin: 0 0 10px;
+  margin: 0 0 50px;
 }
 
 /* ---------- FORMULAR ---------- */
@@ -143,8 +135,6 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  font-family: var(--font-secondary);
-  font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -158,8 +148,6 @@
   border-radius: 999px;
   border: none;
   padding: 8px 14px;
-  font-family: var(--font-secondary);
-  font-size: 14px;
   outline: none;
 }
 
