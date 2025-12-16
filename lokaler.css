@@ -43,9 +43,27 @@
   /* ---------- LOKALE-KORT ---------- */
   
   .lokaler-list {
+    position: relative;
     padding: 110px 150px 48px;
     background-color: var(--yellow-main);
     display: block; /* Default block layout for mobile */
+  }
+
+  .lokaler-list .wave2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-80%); /* move up by half its height */
+    width: 100%;
+  }
+
+  .lokaler-list .wave3 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(80%);
+    pointer-events: none;
   }
   
   .lokale-card {
@@ -173,14 +191,4 @@
   .lokaler-cta-btn {
     padding-inline: 28px;
     margin-bottom: 200px;
-  }
-
-  /* ---------- Wave's ---------- */
-  .wave2 {
-    position: absolute;
-    top: 640px;
-  }
-  .wave3 {
-    position: absolute;
-    top: 1850px;
   }

@@ -20,7 +20,9 @@
   color: var(--yellow-light);
   text-align: center;
 }
-
+.events-hero h1 {
+  padding-top: 20px;
+}
 .events-hero-subtitle {
   max-width: 260px;
   margin: 0 auto;
@@ -147,11 +149,20 @@
     width: 100%;
     pointer-events: none;
   }
+
 .events-list .wave2 {
     position: absolute;
     left: 0;
     top: 0;
     transform: translateY(-80%); /* move up by half its height */
+}
+
+.events-list .wave3 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(80%); /* move down by most of its height */
+    width: 100%;
 }
 
 .events-list h2 {
