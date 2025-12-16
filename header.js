@@ -1,49 +1,57 @@
-// header.js — handles header interactions (mobile menu toggle)
+// ================================================
+// HEADER MENU - Burger menu funktionalitet
+// ================================================
 
+// Vent til siden er indlæst
 document.addEventListener('DOMContentLoaded', function () {
+  // Find burger-knap og menu
   const burger = document.querySelector('.burger');
   const menu = document.getElementById('mobileMenu');
-  if (!burger || !menu) return;
-  // burger image element (swap src between burger and x)
+  if (!burger || !menu) return; // Stop hvis elementer mangler
+  
+  // Find burger-ikon billedet (skal skiftes mellem burger og X)
   const burgerImg = burger.querySelector('.burger-icon');
   const burgerSrc = burgerImg ? burgerImg.getAttribute('src') : null;
   const closeSrc = 'images/icons/x.svg';
 
+  // Funktion til at åbne menuen
   function openMenu() {
-    menu.classList.add('open');
-    menu.setAttribute('aria-hidden', 'false');
+    menu.classList.add('open'); // Tilføj 'open' klasse
+    menu.setAttribute('aria-hidden', 'false'); // Opdater tilgængelighed
     burger.setAttribute('aria-expanded', 'true');
-    if (burgerImg) burgerImg.setAttribute('src', closeSrc);
+    if (burgerImg) burgerImg.setAttribute('src', closeSrc); // Skift til X-ikon
     const firstLink = menu.querySelector('a');
-    if (firstLink) firstLink.focus();
+    if (firstLink) firstLink.focus(); // Sæt fokus på første link
   }
 
+  // Funktion til at lukke menuen
   function closeMenu() {
-    menu.classList.remove('open');
-    menu.setAttribute('aria-hidden', 'true');
+    menu.classList.remove('open'); // Fjern 'open' klasse
+    menu.setAttribute('aria-hidden', 'true'); // Opdater tilgængelighed
     burger.setAttribute('aria-expanded', 'false');
-    if (burgerImg && burgerSrc) burgerImg.setAttribute('src', burgerSrc);
-    burger.focus();
+    if (burgerImg && burgerSrc) burgerImg.setAttribute('src', burgerSrc); // Skift tilbage til burger-ikon
+    burger.focus(); // Sæt fokus tilbage på burger-knap
   }
 
+  // Åbn/luk menu når burger klikkes
   burger.addEventListener('click', function () {
     const isOpen = menu.classList.contains('open');
     if (isOpen) closeMenu(); else openMenu();
   });
 
-  // Close when a link is clicked
+  // Luk menu når et link klikkes
   menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
-  // Close on Escape
+  // Luk menu når Escape trykkes
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') closeMenu();
   });
 
-  // Close menu when resizing from mobile/tablet to desktop
+  // Luk menu når vinduet ændres fra mobil til desktop
   let previousWidth = window.innerWidth;
   window.addEventListener('resize', function () {
     const currentWidth = window.innerWidth;
-    // If crossing the desktop breakpoint (900px), close menu
+    // Hvis vi krydser desktop breakpoint (900px), luk menu
     if (previousWidth < 900 && currentWidth >= 900) {
       closeMenu();
     }

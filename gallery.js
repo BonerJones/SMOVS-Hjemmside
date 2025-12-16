@@ -1,28 +1,32 @@
-// Gallery lightbox functionality
+// ================================================
+// GALLERI LIGHTBOX - Fuldskærmsvisning af billeder
+// ================================================
 
+// Vent til siden er indlæst
 document.addEventListener('DOMContentLoaded', function() {
+  // Find lightbox-elementer
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
   const galleryItems = document.querySelectorAll('.gallery-item img');
 
-  // Add click event to all gallery images
+  // Tilføj klik-event til alle galleribilleder
   galleryItems.forEach(img => {
     img.addEventListener('click', function() {
-      lightboxImg.src = this.src;
-      lightboxImg.alt = this.alt;
-      lightbox.classList.add('active');
-      document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
+      lightboxImg.src = this.src; // Kopier billedets kilde
+      lightboxImg.alt = this.alt; // Kopier billedets alt-tekst
+      lightbox.classList.add('active'); // Vis lightbox
+      document.body.style.overflow = 'hidden'; // Forhindre scrolling når lightbox er åben
     });
   });
 
-  // Close lightbox when clicking outside the image
+  // Luk lightbox når der klikkes udenfor billedet
   lightbox.addEventListener('click', function(e) {
     if (e.target === lightbox) {
       closeLightbox();
     }
   });
 
-  // Close lightbox on Escape key
+  // Luk lightbox når Escape trykkes
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && lightbox.classList.contains('active')) {
       closeLightbox();
@@ -30,8 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Funktion til at lukke lightbox
 function closeLightbox() {
   const lightbox = document.getElementById('lightbox');
-  lightbox.classList.remove('active');
-  document.body.style.overflow = ''; // Restore scrolling
+  lightbox.classList.remove('active'); // Skjul lightbox
+  document.body.style.overflow = ''; // Gendan scrolling
 }

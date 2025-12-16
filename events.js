@@ -1,4 +1,10 @@
+// ================================================
+// EVENTS KALENDER - Filtrering af events efter dato
+// ================================================
+
+// Vent til siden er indlæst
 document.addEventListener("DOMContentLoaded", () => {
+  // Find alle interaktive datoknapper i kalenderen
   const dateButtons = document.querySelectorAll(".calendar-dates button.interactive");
   const eventCard1 = document.querySelector(".event-card-1");
   const eventCard2 = document.querySelector(".event-card-2");
@@ -6,17 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const eventsHeading = document.querySelector(".events-heading");
   const backLink = document.querySelector(".back-link");
 
-  // Function to show the correct event card based on the selected date
+  // Funktion til at vise det korrekte event-kort baseret på valgt dato
   function showEventCard(date) {
-    // Hide all event cards initially
+    // Skjul alle event-kort først
     eventCard1.style.display = "none";
     eventCard2.style.display = "none";
     eventCard3.style.display = "none";
 
-    // Show the back link
+    // Vis "tilbage" link
     backLink.style.display = "block";
 
-    // Update the heading and show the correct event card
+    // Opdater overskrift og vis det rigtige event-kort
     if (date === "10") {
       eventsHeading.textContent = "Events d. 10 Januar";
       eventCard1.style.display = "block";
@@ -29,42 +35,42 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Add click event listeners to all interactive buttons
+  // Tilføj klik-event til alle interaktive knapper
   dateButtons.forEach(button => {
     button.addEventListener("click", () => {
-      // Remove "active" class from all buttons
+      // Fjern "active" klasse fra alle knapper
       dateButtons.forEach(btn => btn.classList.remove("active"));
 
-      // Add "active" class to the clicked button
+      // Tilføj "active" klasse til den klikkede knap
       button.classList.add("active");
 
-      // Show the correct event card based on the selected date
-      const selectedDate = button.dataset.date; // Read the data-date attribute
+      // Vis det korrekte event-kort baseret på den valgte dato
+      const selectedDate = button.dataset.date; // Læs data-date attributten
       showEventCard(selectedDate);
     });
   });
 
-  // Add click event listener to the "Back" link
+  // Tilføj klik-event til "Tilbage" linket
   backLink.addEventListener("click", (e) => {
-    e.preventDefault(); // Prevent default link behavior
+    e.preventDefault(); // Forhindre standard link-funktion
 
-    // Reset the heading and show all event cards
+    // Nulstil overskrift og vis alle event-kort
     eventsHeading.textContent = "Kommende Events";
     eventCard1.style.display = "block";
     eventCard2.style.display = "block";
     eventCard3.style.display = "block";
 
-    // Hide the back link
+    // Skjul "tilbage" link
     backLink.style.display = "none";
 
-    // Remove "active" class from all buttons
+    // Fjern "active" klasse fra alle knapper
     dateButtons.forEach(btn => btn.classList.remove("active"));
   });
 
-  // Set default state to show all cards and hide the back link
+  // Standard tilstand: Vis alle kort og skjul "tilbage" link
   eventsHeading.textContent = "Kommende Events";
   eventCard1.style.display = "block";
   eventCard2.style.display = "block";
   eventCard3.style.display = "block";
-  backLink.style.display = "none"; // Hide the back link initially
+  backLink.style.display = "none";
 });

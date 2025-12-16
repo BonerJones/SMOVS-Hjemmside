@@ -193,7 +193,7 @@
         <button class="menu-close-x" onclick="closeMenu()">
           <img src="images/icons/x.svg" alt="Luk" />
         </button>
-        <img src="images/compressed/mad.jpg">
+        <img src="images/menu/mad.jpg">
       </div>
     </div>
 
@@ -215,12 +215,21 @@
   <!-- ==================================== -->
   <script>
     let currentPage = 0;
+    let maxPage = 4; // Default to drinks (0-4)
     const pages = document.querySelectorAll(".menu-page");
     const overlay = document.getElementById("overlay");
     const modal = document.getElementById("menuModal");
 
     function openMenu(pageIndex) {
       currentPage = pageIndex;
+      
+      // Set max page based on which section we're in
+      if (pageIndex === 5) {
+        maxPage = 5; // Food page only
+      } else {
+        maxPage = 4; // Drinks pages only (0-4)
+      }
+      
       overlay.classList.add("show");
       modal.classList.add("show");
       showPage(currentPage);
@@ -236,9 +245,9 @@
         p.style.display = i === index ? "block" : "none";
       });
       
-      // Hide navigation buttons on the food page (last page)
+      // Hide navigation buttons on the food page
       const navButtons = document.querySelector(".menu-nav");
-      if (index === pages.length - 1) {
+      if (index === 5) {
         navButtons.style.display = "none";
       } else {
         navButtons.style.display = "flex";
@@ -246,12 +255,20 @@
     }
 
     document.getElementById("nextBtn").addEventListener("click", () => {
-      currentPage = (currentPage + 1) % pages.length;
+      if (currentPage < maxPage) {
+        currentPage = currentPage + 1;
+      } else {
+        currentPage = 0; // Loop back to first page in current section
+      }
       showPage(currentPage);
     });
 
     document.getElementById("prevBtn").addEventListener("click", () => {
-      currentPage = (currentPage - 1 + pages.length) % pages.length;
+      if (currentPage > 0 && currentPage <= maxPage) {
+        currentPage = currentPage - 1;
+      } else {
+        currentPage = maxPage; // Loop to last page in current section
+      }
       showPage(currentPage);
     });
 

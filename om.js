@@ -1,18 +1,28 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const items = document.querySelectorAll('.faq-card');
-  items.forEach(card => {
-    const btn = card.querySelector('.faq-toggle');
-    // Icons are handled via CSS ::before mask; image elements are kept for
-    // accessibility but should not be toggled via JS to avoid duplicate icons.
-    const answer = card.querySelector('.faq-answer');
-    if (!btn || !answer) return;
+// ================================================
+// FAQ ACCORDION - Åbn/luk spørgsmål og svar
+// ================================================
 
+// Vent til siden er indlæst
+document.addEventListener('DOMContentLoaded', () => {
+  // Find alle FAQ-kort
+  const items = document.querySelectorAll('.faq-card');
+  
+  items.forEach(card => {
+    const btn = card.querySelector('.faq-toggle'); // Knap til at åbne/lukke
+    const answer = card.querySelector('.faq-answer'); // Svaret der skal vises/skjules
+    if (!btn || !answer) return; // Stop hvis elementer mangler
+
+    // Når knappen klikkes
     btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const opened = card.classList.toggle('open');
+      e.preventDefault(); // Forhindre standard link-funktion
+      
+      const opened = card.classList.toggle('open'); // Skift 'open' klasse
+      
+      // Opdater tilgængelighed
       answer.setAttribute('aria-hidden', (!opened).toString());
       btn.setAttribute('aria-expanded', opened.toString());
-      // visual state handled by CSS (.faq-card.open .faq-toggle::before)
+      
+      // Visuel tilstand håndteres af CSS (.faq-card.open .faq-toggle::before)
     });
   });
 });

@@ -1,230 +1,247 @@
-/* ===========================
-   Vores lokaler – kun mobil (402px)
-   =========================== */
+/* ========================================
+   LOKALER SIDE - Vores lokaler
+   ======================================== */
 
-/* Overstyrer global .page baggrund, så denne side får gul baggrund som i designet */
+/* ========================================
+   LOKALER INTRO
+   ======================================== */
 
-  
-  /* ---------- LOKALER INTRO ---------- */
-  
-  .lokaler-hero {
-    position: relative;
-    width: 100%;
-    background-color: var(--yellow-main);
-  }
+.lokaler-hero {
+  position: relative;
+  width: 100%;
+  background-color: var(--yellow-main);
+}
 
-  .lokaler-hero .wave-welcome {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    pointer-events: none;
-  }
-  
-  /* Grøn blok med overskrift + tekst */
-  .lokaler-hero-inner {
-    background-color: var(--green-dark);
-    color: var(--white);
-    text-align: center;
-    padding: 62px 28px 80px;
-  }
-  
-  .lokaler-title {
-    margin-top: -20px;
-    line-height: 0.8;
-    color: var(--yellow-light);
-  }
-  
-  .lokaler-intro {
-    margin: 0 0 40px;
-    line-height: 1.6;
-  }
-  
-  /* ---------- LOKALE-KORT ---------- */
-  
+/* Bølge-dekoration i toppen */
+.lokaler-hero .wave-welcome {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+/* Grøn blok med overskrift og tekst */
+.lokaler-hero-inner {
+  background-color: var(--green-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 62px 28px 80px;
+}
+
+.lokaler-title {
+  margin-top: -20px;
+  line-height: 0.8;
+  color: var(--yellow-light);
+}
+
+.lokaler-intro {
+  margin: 0 0 40px;
+  line-height: 1.6;
+}
+/* ========================================
+   LOKALE-KORT
+   ======================================== */
+
+.lokaler-list {
+  position: relative;
+  background-color: var(--yellow-main);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 55px 28px 0;
+}
+
+/* Bølge-dekorationer */
+.lokaler-list .wave2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-80%);
+  width: 100%;
+}
+
+.lokaler-list .wave3 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(80%);
+  pointer-events: none;
+}
+
+/* Enkelt lokale-kort */
+.lokale-card {
+  background-color: var(--green-mid);
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 55px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  width: 300px;
+}
+
+/* Billede i kortet */
+.lokale-image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 200px;
+}
+
+/* Indhold i kortet */
+.lokale-card-inner {
+  padding: 10px;
+  color: var(--white);
+}
+
+/* Metadata (antal personer med ikon) */
+.lokale-meta p {
+  margin: 0 0 4px;
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+}
+
+.lokale-meta img {
+  vertical-align: middle;
+  margin-right: 6px;
+  width: 20px;
+  height: 20px;
+}
+
+/* Overskrift */
+.lokale-heading {
+  margin: 0 0 8px;
+  letter-spacing: 0.08em;
+}
+
+/* Beskrivelse */
+.lokale-text {
+  margin: 0 10px 14px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* Desktop: Kort ved siden af hinanden */
+@media (min-width: 900px) {
   .lokaler-list {
-    position: relative;
-    background-color: var(--yellow-main);
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 55px 28px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
+    padding: 55px 150px 100px;
   }
 
-  .lokaler-list .wave2 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: translateY(-80%); /* move up by half its height */
-    width: 100%;
-  }
-
-  .lokaler-list .wave3 {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    transform: translateY(80%);
-    pointer-events: none;
+  .lokale-card {
+    flex: 1 1 400px;
+    max-width: 48%;
+    min-width: 500px;
   }
   
-  .lokale-card {
-    background-color: var(--green-mid);
-    border-radius: 18px;
-    overflow: hidden;
-    margin-bottom: 55px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-    width: 300px;
-  }
   .lokale-image {
     width: 100%;
-    display: block;
+    height: 350px;
     object-fit: cover;
-    height: 200px;
   }
   
   .lokale-card-inner {
-    padding: 10px 10px;
-    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 20px 30px;
   }
-  
-  .lokale-meta p {
-    margin: 0 0 4px;
-    letter-spacing: 0.08em;
-    opacity: 0.8;
+
+  .lokale-btn {
+    margin-top: 20px;
   }
+
   .lokale-meta img {
-    vertical-align: middle;
-    margin-right: 6px;
-    opacity: 1.5;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
   }
-  
-  .lokale-heading {
-    margin: 0 0 8px;
-    letter-spacing: 0.08em;
-  }
-  
-  .lokale-text {
-    margin: 0 10px 14px;
-    line-height: 1.6;
-    opacity: 0.8;
-  }
-  @media (min-width: 900px) {
-    .lokaler-list {
-      display: flex; /* Use flexbox for side-by-side layout */
-      justify-content: center; /* Center cards */
-      flex-wrap: wrap; /* Allow wrapping if there are too many cards */
-      flex-direction: row;
-      gap: 30px; /* Add space between cards */
-      padding: 55px 150px 100px;
-    }
-  
-    .lokale-card {
-      flex: 1 1 400px; /* Grow, shrink, with base width of 400px */
-      max-width: 48%; /* Maximum width for 2 columns */
-      min-width: 500px; /* Minimum width to prevent cards getting too small */
-   
-    }
-    .lokale-image {
-      width: 100%;
-      height: 350px;
-      object-fit: cover;
-    }
-    .lokale-card-inner {
-      display: flex; /* Use flexbox for alignment */
-      flex-direction: column; /* Stack content vertically */
-      justify-content: center; /* Center content vertically */
-      align-items: left; /* Center content horizontally */
-      padding: 20px 30px; /* Add some padding */
-    }
-  
-    .lokale-btn {
-      margin-top: 20px; /* Add spacing above the button */
-    }
+}
 
-    .lokale-meta img {
-      width: 40px;
-      height: 40px;
-    }
-  }
+/* Bølge under lokaler (kun mobil) */
+.lokaler-wave {
+  display: block;
+  width: 100%;
+  margin-top: -200px;
+}
 
+/* Gul boks (kun tablet+) */
+.yellow-box {
+  display: none;
+}
+
+@media (min-width: 510px) {
   .lokaler-wave {
-    display: block;
-    width: 100%;
-    margin-top: -200px;
-  }
-
-  .yellow-box {
     display: none;
   }
 
-  @media (min-width: 510px) {
-    .lokaler-wave {
-      display: none;
-    }
-
-    .yellow-box {
-      display: block;
-      width: 100%; /* Full width */
-      background-color: var(--yellow-main); /* Use the yellow-main color */
-      padding: 40px; /* Add some padding inside the box */
-      margin-top: -120px;
-      margin-bottom: 60px;
-    }
-  }
-  
-  /* Genbrugelig "Book lokale"-knap */
-  .lokale-btn {
+  .yellow-box {
     display: block;
-    margin: 0 auto;
-    padding: 12px 18px;
-    min-width: 140px;
-    width: fit-content;
-    border-radius: 10px;
+    width: 100%;
     background-color: var(--yellow-main);
-    color: var(--text-dark);
-    font-weight: 700;
-    text-decoration: none;
-    text-align: center;
-    border: 2px solid var(--yellow-main);
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    padding: 40px;
+    margin-top: -120px;
+    margin-bottom: 60px;
   }
+}
+/* ========================================
+   KNAPPER
+   ======================================== */
 
-  
-  /* Hover effects for tablet and desktop */
-  @media (min-width: 510px) {
-    .lokale-btn:hover {
-      background-color: transparent;
-      color: var(--yellow-light);
-      border: 2px solid var(--yellow-light);
-    }
-  }
-  
-  /* ---------- CTA-SEKTION ---------- */
-  
-  .lokaler-cta {
-    background-color: var(--green-dark);
-    color: var(--white);
-    text-align: center;
-    padding: 50px 28px 46px;
-  }
-  
-  .lokaler-cta-title {
+/* "Book lokale" knap */
+.lokale-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 18px;
+  min-width: 140px;
+  width: fit-content;
+  border-radius: 10px;
+  background-color: var(--yellow-main);
+  color: var(--text-dark);
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid var(--yellow-main);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
 
-    color: var(--yellow-main);
-    line-height: 0.8;
+/* Hover-effekt (tablet og desktop) */
+@media (min-width: 510px) {
+  .lokale-btn:hover {
+    background-color: transparent;
+    color: var(--yellow-light);
+    border: 2px solid var(--yellow-light);
   }
-  
-  .lokaler-cta-text {
-    margin: 0 0 18px;
-    line-height: 1.6;
-  }
-  
-  /* CTA-knappen nederst – samme stil, men lidt mere luft */
-  .lokaler-cta-btn {
-    padding-inline: 28px;
-    margin-bottom: 200px;
-  }
+}
+
+/* ========================================
+   CTA-SEKTION
+   ======================================== */
+
+.lokaler-cta {
+  background-color: var(--green-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 50px 28px 46px;
+}
+
+.lokaler-cta-title {
+  color: var(--yellow-main);
+  line-height: 0.8;
+}
+
+.lokaler-cta-text {
+  margin: 0 0 18px;
+  line-height: 1.6;
+}
+
+/* CTA-knap med ekstra margin */
+.lokaler-cta-btn {
+  padding-inline: 28px;
+  margin-bottom: 200px;
+}

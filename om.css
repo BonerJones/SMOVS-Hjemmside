@@ -1,6 +1,10 @@
-/* -------------------------- */
-/*          ABOUT             */
-/* -------------------------- */
+/* ========================================
+   OM OS SIDE
+   ======================================== */
+
+/* ========================================
+   ABOUT SEKTION - Om SMOVS
+   ======================================== */
 
 .about {
   background: var(--green-dark);
@@ -10,37 +14,42 @@
   position: relative;
 }
 
+/* Bølge-dekoration i toppen */
 .about .wave-welcome {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   pointer-events: none;
-
 }
 
+/* Overskrift */
 .about-title {
   margin-top: -10px;
   color: var(--yellow-light);
   margin-bottom: 10px;
 }
 
+/* Brødtekst */
 .about-text {
   opacity: 0.9;
   margin-bottom: 70px;
 }
+
+/* Desktop: Bredere tekst */
 @media (min-width: 900px) {
   .about {
     padding: 0 32px;
   }
+  
   .about-text {
     max-width: 700px;
     margin: 0 auto 70px;
   }
 }
-/* -------------------------- */
-/*         GALLERY            */
-/* -------------------------- */
+/* ========================================
+   GALLERI SEKTION
+   ======================================== */
 
 .gallery {
   background-color: var(--yellow-main);
@@ -56,6 +65,7 @@
   z-index: 10;
 }
 
+/* Bølge-dekorationer */
 .gallery.who .wave2 {
   position: absolute;
   left: 0;
@@ -74,41 +84,45 @@
   z-index: 2;
 }
 
-/* -------------------------- */
-/*           WHO              */
-/* -------------------------- */
+/* ========================================
+   WHO - "Hvem er vi" sektion
+   ======================================== */
 
+/* Indre container (mobil: vertikal, desktop: horisontal) */
 .who-inner {
   display: flex;
-  flex-direction: column; /* Stack items vertically for mobile */
-  align-items: center; /* Center all items horizontally */
-  text-align: center; /* Center text for mobile */
-  gap: 16px; /* Add consistent spacing between elements */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
 }
 
+/* Tekstindhold */
 .who-content {
   display: flex;
-  flex-direction: column; /* Stack h2 and p vertically */
-  align-items: center; /* Center h2 and p horizontally */
+  flex-direction: column;
+  align-items: center;
 }
 
 .who-content h2 {
-  margin-bottom: 8px; /* Add spacing below the h2 */
+  margin-bottom: 8px;
 }
 
 .who-content p {
-  line-height: 1.6; /* Improve readability */
+  line-height: 1.6;
   margin-top: 0;
 }
 
+/* Billede */
 .who-img {
-  width: 100%; /* Make the image responsive */
-  max-width: 300px; /* Limit the maximum width of the image */
-  height: auto; /* Maintain the aspect ratio */
-  border-radius: 8px; /* Optional: Add rounded corners */
-  margin: 16px 0; /* Add spacing above and below the image */
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin: 16px 0;
 }
 
+/* Galleriliste */
 .gallery-list {
   display: flex;
   flex-direction: column;
@@ -121,46 +135,49 @@
   border-radius: 18px;
 }
 
+/* Desktop: Billede og tekst ved siden af hinanden */
 @media (min-width: 900px) {
-    .who-inner {
-      display: flex; /* Enable flexbox for layout */
-      flex-direction: row; /* Arrange items in a horizontal row */
-      align-items: flex-start; /* Align items at the top */
-      justify-content: space-between; /* Add space between the elements */
-    }
-  
-    .who-content {
-      flex: 1; /* Allow the content to take up available space */
-      margin-right: 20px; /* Add spacing between the content and the image */
-      margin-top: 10px;
-      gap: 70px;
-    }
-  
-    .who-img {
-      flex: 1; /* Allow the image to take up available space */
-      max-width: 50%; /* Optional: Limit the image width */
-      width: 100%;
-      height: 600px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
+  .who-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .who-content {
+    flex: 1;
+    margin-right: 20px;
+    margin-top: 10px;
+    gap: 70px;
+  }
+
+  .who-img {
+    flex: 1;
+    max-width: 50%;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
 }
 
-/* -------------------------- */
-/*           FAQ              */
-/* -------------------------- */
+/* ========================================
+   FAQ SEKTION - Ofte stillede spørgsmål
+   ======================================== */
 
 .faq {
   padding: 28px 16px 40px;
   background: var(--green-dark);
 }
 
+/* Overskrift */
 .faq h2 {
   text-align: center;
   margin-bottom: 16px;
   color: var(--yellow-light);
 }
 
+/* Liste af FAQ kort */
 .faq-list {
   display: flex;
   flex-direction: column;
@@ -169,6 +186,7 @@
   margin: 0 auto;
 }
 
+/* Enkelt FAQ kort */
 .faq-card {
   display: flex;
   gap: 14px;
@@ -180,6 +198,7 @@
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
+/* Tekstområde */
 .faq-text {
   flex: 1 1 auto;
 }
@@ -189,6 +208,7 @@
   color: var(--white);
 }
 
+/* Svar (skjult som standard) */
 .faq-answer {
   max-height: 0;
   overflow: hidden;
@@ -197,11 +217,13 @@
   color: rgba(255,255,255,0.95);
 }
 
+/* Når FAQ er åbent */
 .faq-card.open .faq-answer {
   max-height: 320px;
   opacity: 1;
 }
 
+/* Plus/minus knap */
 .faq-toggle {
   background: transparent;
   border: none;
@@ -216,10 +238,12 @@
   position: relative;
 }
 
+/* Skjul billede (bruger CSS ikoner i stedet) */
 .faq-toggle img {
   display: none;
 }
 
+/* Plus-ikon (lukket tilstand) */
 .faq-toggle::before {
   content: '';
   display: block;
@@ -231,35 +255,37 @@
   mask: url('images/icons/plus.svg') center/contain no-repeat;
 }
 
+/* Minus-ikon (åben tilstand) */
 .faq-card.open .faq-toggle::before {
   -webkit-mask: url('images/icons/minus.svg') center/contain no-repeat;
   mask: url('images/icons/minus.svg') center/contain no-repeat;
 }
+/* Bølge under FAQ (kun mobil) */
+.lokaler-wave {
+  display: block;
+  width: 100%;
+  margin-top: -1px;
+}
+
+/* Tablet og op: Skjul bølge */
+@media (min-width: 510px) {
   .lokaler-wave {
-    display: block;
-    width: 100%;
-    margin-top: -1px;
+    display: none;
   }
+}
 
-
-
-  @media (min-width: 510px) {
-    .lokaler-wave {
-      display: none;
-    }
-
-
-  }
+/* Desktop: Bredere FAQ liste */
 @media (min-width: 900px) {
   .faq-list {
     max-width: 700px;
   }
 }
 
-/* ========================================================= */
-/*                    RESPONSIVE STYLES                      */
-/* ========================================================= */
+/* ========================================
+   RESPONSIVE STYLES
+   ======================================== */
 
+/* Små mobiler: Sikre FAQ kort fungerer */
 @media (max-width: 420px) {
   .faq-card {
     flex-direction: row;
@@ -269,10 +295,12 @@
     padding: 8px;
   }
 }
+
+/* Tablet og op: Gul boks */
 @media (min-width: 510px) {
   .yellow-box {
-    width: 100%; /* Full width */
-    background-color: var(--yellow-main); /* Use the yellow-main color */
-    padding: 40px; /* Add some padding inside the box */
+    width: 100%;
+    background-color: var(--yellow-main);
+    padding: 40px;
   }
 }

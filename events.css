@@ -1,28 +1,35 @@
-/* EVENTS INTRO SECTION */
+/* ========================================
+   EVENTS INTRO SEKTION
+   ======================================== */
+
 .events-hero {
   position: relative;
   width: 100%;
   background: var(--green-dark);
 }
 
+/* Bølge-dekoration i toppen */
 .events-hero .wave-welcome {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   pointer-events: none;
-
 }
 
+/* Overskrift */
 .events-hero-title {
   margin: 0 0 6px;
   letter-spacing: 0.06em;
   color: var(--yellow-light);
   text-align: center;
 }
+
 .events-hero h1 {
   padding-top: 20px;
 }
+
+/* Undertekst */
 .events-hero-subtitle {
   max-width: 260px;
   margin: 0 auto;
@@ -31,41 +38,53 @@
   text-align: center;
 }
 
+/* Desktop: Ekstra margin */
 @media screen and (min-width: 900px) {
-    .events-hero {
-      margin-top: 80px;
-    }
-  
+  .events-hero {
+    margin-top: 80px;
+  }
 }
 
-/* Calendar Section */
+/* ========================================
+   EVENTS KALENDER
+   ======================================== */
+
 .events-calendar {
-  margin: 60px 30px;
+  margin: 60px 30px 120px;
   text-align: center;
-  margin-bottom: 120px;
 }
+
+/* Label over kalenderen */
 .calendar-label {
   letter-spacing: 0.08em;
   color: var(--yellow-main);
   margin-bottom: 8px;
 }
+
+/* Kalender-kort med gul baggrund */
 .calendar-card {
   background-color: var(--yellow-main);
   border-radius: 18px;
   padding: 16px;
 }
+
+/* Grid til ugedage og datoer */
 .calendar-weekdays,
 .calendar-dates {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, 1fr); /* 7 kolonner (mandag-søndag) */
   gap: 4px;
 }
+
+/* Ugedag navne */
 .calendar-weekdays span {
   font-family: var(--font-secondary-bold);
   font-size: 14px;
   text-align: center;
   color: var(--green-dark);
 }
+
+/* Dato knapper */
 .calendar-dates button {
   background: none;
   border: none;
@@ -75,47 +94,57 @@
   text-align: center;
   padding: 8px 0;
   border-radius: 50%;
-  cursor: default;
+  cursor: default; /* Ikke klikbare som standard */
 }
+
+/* Klikbare dato knapper (med events) */
 .calendar-dates button.interactive {
   background-color: var(--white);
   cursor: pointer;
 }
+
+/* Aktiv (valgt) dato */
 .calendar-dates button.interactive.active {
   background-color: var(--green-dark);
   color: var(--white);
 }
+
+/* Desktop: Større kalender med mere plads */
 @media (min-width: 900px) {
   .events-calendar {
     padding: 0 300px;
-    align-items: center;
     max-width: 1250px;
     margin: 60px auto 120px;
   }
+  
   .calendar-dates {
     gap: 25px;
   }
+  
   .calendar-weekdays span {
-    font-family: var(--font-secondary-bold);
     font-size: 20px;
-    text-align: center;
-    color: var(--green-dark);
   }
 }
 
-/* Events List Section */
+/* ========================================
+   EVENTS LISTE SEKTION
+   ======================================== */
+
+/* Kort vises alle som standard */
 .event-card-1,
 .event-card-2,
 .event-card-3 {
-  display: block; /* Show all cards by default */
+  display: block;
 }
 
+/* Overskrift for events */
 .events-heading {
   color: var(--text-dark);
   text-align: center;
   margin-bottom: 12px;
 }
 
+/* "Tilbage" link */
 .back-link {
   display: block;
   font-family: var(--font-secondary-bold);
@@ -126,49 +155,52 @@
   margin-top: 12px;
 }
 
-/* Hover effects only for devices with hover capability (not mobile) */
+/* Hover-effekt kun på desktop */
 @media (hover: hover) {
   .back-link:hover {
     text-decoration: underline;
   }
 }
 
+/* Events liste container */
 .events-list {
   position: relative;
   margin: 20px 0;
   background-color: var(--yellow-main);
-  align-content: center;
-  display: block; /* Default block layout for mobile */
+  display: block;
 }
 
+/* Bølge positioning */
 .wave2 {
-    position: absolute;
-    bottom: -1px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    pointer-events: none;
-  }
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  pointer-events: none;
+}
 
 .events-list .wave2 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: translateY(-80%); /* move up by half its height */
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-80%);
 }
 
 .events-list .wave3 {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    transform: translateY(80%); /* move down by most of its height */
-    width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(80%);
+  width: 100%;
 }
 
 .events-list h2 {
   margin-bottom: 16px;
   text-align: center;
 }
+
+/* Event kort styling */
 .event-card-1, .event-card-2, .event-card-3 {
   background-color: var(--green-dark);
   border-radius: 14px;
@@ -176,6 +208,8 @@
   max-width: 70%;
   margin: 0 auto 20px;
 }
+
+/* Tekst inden i kort */
 .event-card-1 h4, 
 .event-card-1 h5, 
 .event-card-1 p,
@@ -187,6 +221,8 @@
 .event-card-3 p {
   padding: 0 32px;
 }
+
+/* Billeder i kort */
 .event-card-1 img,
 .event-card-2 img,
 .event-card-3 img {
@@ -195,15 +231,21 @@
   object-fit: cover;
   border-radius: 10px;
 }
+
+/* Event kategori */
 .event-category {
   color: var(--yellow-main);
   text-transform: uppercase;
   margin-bottom: 4px;
 }
+
+/* Event titel */
 .event-title {
   color: var(--yellow-light);
   margin: 0 0 8px;
 }
+
+/* Event metadata (dato, tid, lokation) */
 .event-meta {
   font-family: var(--font-secondary);
   font-weight: 100;
@@ -219,6 +261,8 @@
   height: 16px;
   color: var(--white);
 }
+
+/* Event beskrivelse */
 .event-description {
   margin-bottom: 62px;
   padding-bottom: 32px;
@@ -227,24 +271,25 @@
   opacity: 0.8;
 }
 
- @media (min-width: 900px) {
+/* Desktop: Kort ved siden af hinanden */
+@media (min-width: 900px) {
   .events-list {
-    display: block; /* Keep the overall layout block */
+    display: block;
   }
 
   .event-cards-container {
-    display: flex; /* Use flexbox for side-by-side layout */
-    justify-content: space-between; /* Add space between cards */
-    gap: 10px; /* Optional: Add spacing between cards */
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
   }
 
   .event-card-1,
   .event-card-2,
   .event-card-3 {
-    flex: 1; /* Make all cards equal width */
-    max-width: 28%; /* Optional: Limit the width of each card */
+    flex: 1;
+    max-width: 28%;
   }
- }
+}
 /* Note Section */
 .events-note {
   text-align: center;
