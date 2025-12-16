@@ -43,6 +43,7 @@
   /* ---------- LOKALE-KORT ---------- */
   
   .lokaler-list {
+    position: relative;
     background-color: var(--yellow-main);
     display: flex;
     align-items: center;
