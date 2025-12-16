@@ -43,9 +43,11 @@
   /* ---------- LOKALE-KORT ---------- */
   
   .lokaler-list {
-    padding: 110px 150px 48px;
     background-color: var(--yellow-main);
-    display: block; /* Default block layout for mobile */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 55px 28px 0;
   }
   
   .lokale-card {
@@ -54,34 +56,33 @@
     overflow: hidden;
     margin-bottom: 55px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    width: 300px;
   }
-  
   .lokale-image {
     width: 100%;
     display: block;
-    height: auto;
+    object-fit: cover;
+    height: 200px;
   }
   
   .lokale-card-inner {
-    padding: 14px 16px 18px;
+    padding: 10px 10px;
     color: var(--white);
   }
   
   .lokale-meta {
     margin: 0 0 4px;
     letter-spacing: 0.08em;
-    text-transform: uppercase;
     opacity: 0.8;
   }
   
   .lokale-heading {
     margin: 0 0 8px;
     letter-spacing: 0.08em;
-    text-transform: uppercase;
   }
   
   .lokale-text {
-    margin: 0 0 14px;
+    margin: 0 10px 14px;
     line-height: 1.6;
     opacity: 0.8;
   }
@@ -89,13 +90,14 @@
     .lokaler-list {
       display: flex; /* Use flexbox for side-by-side layout */
       justify-content: space-between; /* Add space between cards */
-      gap: 10px; /* Optional: Add spacing between cards */
       flex-wrap: wrap; /* Allow wrapping if there are too many cards */
+      flex-direction: row;
+      padding: 55px 150px 100px;
     }
   
     .lokale-card {
       flex: 1; /* Make all cards equal width */
-      max-width: 40%; /* Optional: Limit the width of each card */
+      max-width: 35%; /* Optional: Limit the width of each card */
     }
     .lokale-image {
       width: 100%;
@@ -126,17 +128,19 @@
   
   /* Genbrugelig "Book lokale"-knap */
   .lokale-btn {
-    display: inline-block;
-    padding: 15px 53px;
+    display: block;
+    padding: 15px 40px;
     border-radius: 14px;
     background-color: var(--yellow-main);
     color: var(--text-dark);
     letter-spacing: 0.08em;
     text-decoration: none;
+    align-items: center;
     text-align: center;
     border: 2px solid var(--yellow-main);
     cursor: pointer;
   }
+
   
   /* Hover effects only for devices with hover capability (not mobile) */
   @media (hover: hover) {
@@ -153,7 +157,7 @@
     background-color: var(--green-dark);
     color: var(--white);
     text-align: center;
-    padding: 115px 28px 46px;
+    padding: 50px 28px 46px;
   }
   
   .lokaler-cta-title {
@@ -164,15 +168,14 @@
   
   .lokaler-cta-text {
     margin: 0 0 18px;
-    font-family: var(--font-secondary);
-    font-size: 14px;
     line-height: 1.6;
   }
   
   /* CTA-knappen nederst – samme stil, men lidt mere luft */
   .lokaler-cta-btn {
     padding-inline: 28px;
-    margin-bottom: 200px;
+    margin: 20px auto 120px;
+    max-width: 200px;
   }
 
   /* ---------- Wave's ---------- */
